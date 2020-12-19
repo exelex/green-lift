@@ -1,0 +1,13 @@
+{{#sprites}}
+
+@mixin mixin-icon-{{name}}
+	width: {{px.width}}
+	height: {{px.height}}
+	background-image: url(../img/sprite.png)
+	background-position: {{px.offset_x}} {{px.offset_y}}
+	background-size: {{px.total_width}} {{px.total_height}}
+
+.icon-{{name}}
+	@include mixin-icon-{{name}}
+	
+{{/sprites}}

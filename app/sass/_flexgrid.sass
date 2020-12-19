@@ -1,0 +1,909 @@
+@mixin row
+	box-sizing: border-box
+	display: flex
+	flex: 0 1 auto
+	-webkit-box-orient: horizontal
+	-webkit-box-direction: normal
+	flex-direction: row
+	flex-wrap: wrap
+	margin-right: -10px
+	margin-left: -10px
+
+.container-fluid,
+.container 
+	margin-right: auto
+	margin-left: auto
+
+@mixin container-fluid
+	padding-right: 10px
+	padding-left: 10px
+
+.container-fluid 
+	@include container-fluid
+
+.row 
+	@include row
+
+@mixin row-reverse 
+	flex-direction: row-reverse
+	
+.row.reverse
+	@include row-reverse
+
+
+@mixin col-reverse
+	flex-direction: column-reverse
+	
+.col.reverse 
+	@include col-reverse
+
+	
+@mixin col-all
+	box-sizing: border-box
+	flex: 0 0 auto
+	padding-right: 10px
+	padding-left: 10px
+	
+.col-xs,
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-offset-0,
+.col-xs-offset-1,
+.col-xs-offset-2,
+.col-xs-offset-3,
+.col-xs-offset-4,
+.col-xs-offset-5,
+.col-xs-offset-6,
+.col-xs-offset-7,
+.col-xs-offset-8,
+.col-xs-offset-9,
+.col-xs-offset-10,
+.col-xs-offset-11,
+.col-xs-offset-12 
+	@include col-all
+
+@mixin col
+	flex-grow: 1
+	flex-basis: 0
+	max-width: 100%
+	min-width: 100%
+
+@mixin col-1
+	-ms-flex-preferred-size: 8.33333333%
+	flex-basis: 8.33333333%
+	max-width: 8.33333333%
+	min-width: 8.33333333%
+
+@mixin col-2
+	-ms-flex-preferred-size: 16.66666667%
+	flex-basis: 16.66666667%
+	max-width: 16.66666667%
+	min-width: 16.66666667%
+
+@mixin col-3
+	-ms-flex-preferred-size: 25%
+	flex-basis: 25%
+	max-width: 25%
+	min-width: 25%
+
+@mixin col-4
+	-ms-flex-preferred-size: 33.33333333%
+	flex-basis: 33.33333333%
+	max-width: 33.33333333%
+	min-width: 33.33333333%
+
+@mixin col-5
+	-ms-flex-preferred-size: 41.66666667%
+	flex-basis: 41.66666667%
+	max-width: 41.66666667%
+	min-width: 41.66666667%
+
+@mixin col-6
+	-ms-flex-preferred-size: 50%
+	flex-basis: 50%
+	max-width: 50%
+	min-width: 50%
+
+@mixin col-7
+	-ms-flex-preferred-size: 58.33333333%
+	flex-basis: 58.33333333%
+	max-width: 58.33333333%
+	min-width: 58.33333333%
+
+@mixin col-8
+	-ms-flex-preferred-size: 66.66666667%
+	flex-basis: 66.66666667%
+	max-width: 66.66666667%
+	min-width: 66.66666667%
+
+@mixin col-9
+	-ms-flex-preferred-size: 75%
+	flex-basis: 75%
+	max-width: 75%
+	min-width: 75%
+
+@mixin col-10
+	-ms-flex-preferred-size: 83.33333333%
+	flex-basis: 83.33333333%
+	max-width: 83.33333333%
+	min-width: 83.33333333%
+
+@mixin col-11
+	-ms-flex-preferred-size: 91.66666667%
+	flex-basis: 91.66666667%
+	max-width: 91.66666667%
+	min-width: 91.66666667%
+
+@mixin col-12
+	-ms-flex-preferred-size: 100%
+	flex-basis: 100%
+	max-width: 100%
+	min-width: 100%
+
+.col-xs 
+	@include col
+
+.col-xs-1 
+	@include col-1
+
+.col-xs-2 
+	@include col-2
+
+.col-xs-3 
+	@include col-3
+
+.col-xs-4 
+	@include col-4
+
+.col-xs-5 
+	@include col-5
+
+.col-xs-6 
+	@include col-6
+
+.col-xs-7 
+	@include col-7
+
+.col-xs-8 
+	@include col-8
+
+.col-xs-9 
+	@include col-9
+
+.col-xs-10 
+	@include col-10
+
+.col-xs-11 
+	@include col-11
+
+.col-xs-12 
+	@include col-12
+
+
+@mixin col-offset-0
+	margin-left: 0
+
+.col-xs-offset-0 
+	@include col-offset-0
+
+@mixin col-offset-1
+	margin-left: 8.33333333%
+
+.col-xs-offset-1 
+	@include col-offset-1
+
+@mixin col-offset-2
+	margin-left: 16.66666667%
+
+.col-xs-offset-2 
+	@include col-offset-2
+
+@mixin col-offset-3
+	margin-left: 25%
+
+.col-xs-offset-3 
+	@include col-offset-3
+
+@mixin col-offset-4
+	margin-left: 33.33333333%
+
+.col-xs-offset-4 
+	@include col-offset-4
+
+@mixin col-offset-5
+	margin-left: 41.66666667%
+
+.col-xs-offset-5 
+	@include col-offset-5
+
+@mixin col-offset-6
+	margin-left: 50%
+
+.col-xs-offset-6 
+	@include col-offset-6
+
+@mixin col-offset-7
+	margin-left: 58.33333333%
+
+.col-xs-offset-7 
+	@include col-offset-7
+
+@mixin col-offset-8
+	margin-left: 66.66666667%
+
+.col-xs-offset-8 
+	@include col-offset-8
+
+@mixin col-offset-9
+	margin-left: 75%
+
+.col-xs-offset-9 
+	@include col-offset-9
+
+@mixin col-offset-10
+	margin-left: 83.33333333%
+
+.col-xs-offset-10 
+	@include col-offset-10
+
+@mixin col-offset-11
+	margin-left: 91.66666667%
+
+.col-xs-offset-11 
+	@include col-offset-11
+	
+	
+	
+@mixin start
+	-webkit-box-pack: start
+	-ms-flex-pack: start
+	justify-content: flex-start
+	text-align: start
+	
+@mixin center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+	text-align: center
+	
+@mixin end
+	-webkit-box-pack: end
+	-ms-flex-pack: end
+	justify-content: flex-end
+	text-align: end
+	
+@mixin top
+	-webkit-box-align: start
+	-ms-flex-align: start
+	align-items: flex-start
+	
+@mixin middle
+	-webkit-box-align: center
+	-ms-flex-align: center
+	align-items: center
+	
+@mixin bottom
+	-webkit-box-align: end
+	-ms-flex-align: end
+	align-items: flex-end
+	
+@mixin around
+	-ms-flex-pack: distribute
+	justify-content: space-around
+
+@mixin between
+	-webkit-box-pack: justify
+	-ms-flex-pack: justify
+	justify-content: space-between
+
+@mixin first
+	-webkit-box-ordinal-group: 0
+	-ms-flex-order: -1
+	order: -1
+
+@mixin last
+	-webkit-box-ordinal-group: 2
+	-ms-flex-order: 1
+	order: 1
+	
+	
+	
+.start-xs 
+	@include start
+
+.center-xs 
+	@include center
+
+.end-xs 
+	@include end
+
+.top-xs 
+	@include top
+
+.middle-xs 
+	@include middle
+
+.bottom-xs 
+	@include bottom
+
+.around-xs 
+	@include around
+
+.between-xs 
+	@include between
+
+.first-xs 
+	@include first
+
+.last-xs 
+	@include last
+
+
+@media only screen and (min-width: $screen-xxs-min) and (max-width: $screen-xxs-max) 
+	.col-xxs,
+	.col-xxs-1,
+	.col-xxs-2,
+	.col-xxs-3,
+	.col-xxs-4,
+	.col-xxs-5,
+	.col-xxs-6,
+	.col-xxs-7,
+	.col-xxs-8,
+	.col-xxs-9,
+	.col-xxs-10,
+	.col-xxs-11,
+	.col-xxs-12,
+	.col-xxs-offset-0,
+	.col-xxs-offset-1,
+	.col-xxs-offset-2,
+	.col-xxs-offset-3,
+	.col-xxs-offset-4,
+	.col-xxs-offset-5,
+	.col-xxs-offset-6,
+	.col-xxs-offset-7,
+	.col-xxs-offset-8,
+	.col-xxs-offset-9,
+	.col-xxs-offset-10,
+	.col-xxs-offset-11,
+	.col-xxs-offset-12 
+		@include col-all
+
+
+	.col-xxs 
+		@include col
+
+	.col-xxs-1 
+		@include col-1
+
+	.col-xxs-2 
+		@include col-2
+
+	.col-xxs-3 
+		@include col-3
+
+	.col-xxs-4 
+		@include col-4
+
+	.col-xxs-5 
+		@include col-5
+
+	.col-xxs-6 
+		@include col-6
+
+	.col-xxs-7 
+		@include col-7
+
+	.col-xxs-8 
+		@include col-8
+
+	.col-xxs-9 
+		@include col-9
+
+	.col-xxs-10 
+		@include col-10
+
+	.col-xxs-11 
+		@include col-11
+
+	.col-xxs-12 
+		@include col-12
+	
+
+	.col-xxs-offset-0 
+		@include col-offset-0
+	
+	.col-xxs-offset-1 
+		@include col-offset-1
+
+	.col-xxs-offset-2 
+		@include col-offset-2
+
+	.col-xxs-offset-3 
+		@include col-offset-3	
+
+	.col-xxs-offset-4 
+		@include col-offset-4	
+
+	.col-xxs-offset-5 
+		@include col-offset-5	
+
+	.col-xxs-offset-6 
+		@include col-offset-6	
+
+	.col-xxs-offset-7 
+		@include col-offset-7	
+
+	.col-xxs-offset-8 
+		@include col-offset-8	
+
+	.col-xxs-offset-9 
+		@include col-offset-9	
+
+	.col-xxs-offset-10 
+		@include col-offset-10	
+
+	.col-xxs-offset-11 
+		@include col-offset-11	
+
+	.start-xxs 
+		@include start
+
+	.center-xxs 
+		@include center
+
+	.end-xxs 
+		@include end
+	
+	.top-xxs 
+		@include top
+
+	.middle-xxs 
+		@include middle
+
+	.bottom-xxs 
+		@include bottom
+
+	.around-xxs 
+		@include around
+
+	.between-xxs 
+		@include between
+
+	.first-xxs 
+		@include first
+
+	.last-xxs 
+		@include last
+	
+
+
+
+@media only screen and (min-width: $screen-sm-min) 
+
+	.col-sm,
+	.col-sm-1,
+	.col-sm-2,
+	.col-sm-3,
+	.col-sm-4,
+	.col-sm-5,
+	.col-sm-6,
+	.col-sm-7,
+	.col-sm-8,
+	.col-sm-9,
+	.col-sm-10,
+	.col-sm-11,
+	.col-sm-12,
+	.col-sm-offset-0,
+	.col-sm-offset-1,
+	.col-sm-offset-2,
+	.col-sm-offset-3,
+	.col-sm-offset-4,
+	.col-sm-offset-5,
+	.col-sm-offset-6,
+	.col-sm-offset-7,
+	.col-sm-offset-8,
+	.col-sm-offset-9,
+	.col-sm-offset-10,
+	.col-sm-offset-11,
+	.col-sm-offset-12 
+		@include col-all
+	
+
+	.col-sm 
+		@include col
+
+	.col-sm-1 
+		@include col-1
+
+	.col-sm-2 
+		@include col-2
+
+	.col-sm-3 
+		@include col-3
+
+	.col-sm-4 
+		@include col-4
+
+	.col-sm-5 
+		@include col-5
+
+	.col-sm-6 
+		@include col-6
+
+	.col-sm-7 
+		@include col-7
+
+	.col-sm-8 
+		@include col-8
+
+	.col-sm-9 
+		@include col-9
+
+	.col-sm-10 
+		@include col-10
+
+	.col-sm-11 
+		@include col-11
+
+	.col-sm-12 
+		@include col-12
+	
+
+	.col-sm-offset-0 
+		@include col-offset-0
+	
+	.col-sm-offset-1 
+		@include col-offset-1
+
+	.col-sm-offset-2 
+		@include col-offset-2
+
+	.col-sm-offset-3 
+		@include col-offset-3	
+
+	.col-sm-offset-4 
+		@include col-offset-4	
+
+	.col-sm-offset-5 
+		@include col-offset-5	
+
+	.col-sm-offset-6 
+		@include col-offset-6	
+
+	.col-sm-offset-7 
+		@include col-offset-7	
+
+	.col-sm-offset-8 
+		@include col-offset-8	
+
+	.col-sm-offset-9 
+		@include col-offset-9	
+
+	.col-sm-offset-10 
+		@include col-offset-10	
+
+	.col-sm-offset-11 
+		@include col-offset-11
+	
+
+	.start-sm 
+		@include start
+
+	.center-sm 
+		@include center
+
+	.end-sm 
+		@include end
+	
+	.top-sm 
+		@include top
+
+	.middle-sm 
+		@include middle
+
+	.bottom-sm 
+		@include bottom
+
+	.around-sm 
+		@include around
+
+	.between-sm 
+		@include between
+
+	.first-sm 
+		@include first
+
+	.last-sm 
+		@include last
+	
+
+
+@media only screen and (min-width: $screen-md-min) 
+
+	.col-md,
+	.col-md-1,
+	.col-md-2,
+	.col-md-3,
+	.col-md-4,
+	.col-md-5,
+	.col-md-6,
+	.col-md-7,
+	.col-md-8,
+	.col-md-9,
+	.col-md-10,
+	.col-md-11,
+	.col-md-12,
+	.col-md-offset-0,
+	.col-md-offset-1,
+	.col-md-offset-2,
+	.col-md-offset-3,
+	.col-md-offset-4,
+	.col-md-offset-5,
+	.col-md-offset-6,
+	.col-md-offset-7,
+	.col-md-offset-8,
+	.col-md-offset-9,
+	.col-md-offset-10,
+	.col-md-offset-11,
+	.col-md-offset-12 
+		@include col-all
+	
+
+	.col-md 
+		@include col
+
+	.col-md-1 
+		@include col-1
+
+	.col-md-2 
+		@include col-2
+
+	.col-md-3 
+		@include col-3
+
+	.col-md-4 
+		@include col-4
+
+	.col-md-5 
+		@include col-5
+
+	.col-md-6 
+		@include col-6
+
+	.col-md-7 
+		@include col-7
+
+	.col-md-8 
+		@include col-8
+
+	.col-md-9 
+		@include col-9
+
+	.col-md-10 
+		@include col-10
+
+	.col-md-11 
+		@include col-11
+
+	.col-md-12 
+		@include col-12
+	
+
+	.col-md-offset-0 
+		@include col-offset-0
+	
+	.col-md-offset-1 
+		@include col-offset-1
+
+	.col-md-offset-2 
+		@include col-offset-2
+
+	.col-md-offset-3 
+		@include col-offset-3	
+
+	.col-md-offset-4 
+		@include col-offset-4	
+
+	.col-md-offset-5 
+		@include col-offset-5	
+
+	.col-md-offset-6 
+		@include col-offset-6	
+
+	.col-md-offset-7 
+		@include col-offset-7	
+
+	.col-md-offset-8 
+		@include col-offset-8	
+
+	.col-md-offset-9 
+		@include col-offset-9	
+
+	.col-md-offset-10 
+		@include col-offset-10	
+
+	.col-md-offset-11 
+		@include col-offset-11
+	
+
+	.start-md 
+		@include start
+
+	.center-md 
+		@include center
+
+	.end-md 
+		@include end
+	
+	.top-md 
+		@include top
+
+	.middle-md 
+		@include middle
+
+	.bottom-md 
+		@include bottom
+
+	.around-md 
+		@include around
+
+	.between-md 
+		@include between
+
+	.first-md 
+		@include first
+
+	.last-md 
+		@include last
+	
+
+
+@media only screen and (min-width: $screen-lg-min) 
+
+	.col-lg,
+	.col-lg-1,
+	.col-lg-2,
+	.col-lg-3,
+	.col-lg-4,
+	.col-lg-5,
+	.col-lg-6,
+	.col-lg-7,
+	.col-lg-8,
+	.col-lg-9,
+	.col-lg-10,
+	.col-lg-11,
+	.col-lg-12,
+	.col-lg-offset-0,
+	.col-lg-offset-1,
+	.col-lg-offset-2,
+	.col-lg-offset-3,
+	.col-lg-offset-4,
+	.col-lg-offset-5,
+	.col-lg-offset-6,
+	.col-lg-offset-7,
+	.col-lg-offset-8,
+	.col-lg-offset-9,
+	.col-lg-offset-10,
+	.col-lg-offset-11,
+	.col-lg-offset-12 
+		@include col-all
+	
+	
+
+	.col-lg 
+		@include col
+	
+	.col-lg-1
+		@include col-1
+	
+	.col-lg-2
+		@include col-2
+	
+	.col-lg-3
+		@include col-3
+	
+	.col-lg-4
+		@include col-4
+	
+	.col-lg-5
+		@include col-5
+	
+	.col-lg-6
+		@include col-6
+	
+	.col-lg-7
+		@include col-7
+	
+	.col-lg-8
+		@include col-8
+	
+	.col-lg-9
+		@include col-9
+	
+	.col-lg-10
+		@include col-10
+	
+	.col-lg-11
+		@include col-11
+	
+	.col-lg-12
+		@include col-12
+	
+
+	.col-lg-offset-0 
+		@include col-offset-0
+	
+	.col-lg-offset-1 
+		@include col-offset-1
+
+	.col-lg-offset-2 
+		@include col-offset-2
+
+	.col-lg-offset-3 
+		@include col-offset-3	
+
+	.col-lg-offset-4 
+		@include col-offset-4	
+
+	.col-lg-offset-5 
+		@include col-offset-5	
+
+	.col-lg-offset-6 
+		@include col-offset-6	
+
+	.col-lg-offset-7 
+		@include col-offset-7	
+
+	.col-lg-offset-8 
+		@include col-offset-8	
+
+	.col-lg-offset-9 
+		@include col-offset-9	
+
+	.col-lg-offset-10 
+		@include col-offset-10	
+
+	.col-lg-offset-11 
+		@include col-offset-11
+	
+
+	.start-lg 
+		@include start
+
+	.center-lg 
+		@include center
+
+	.end-lg 
+		@include end
+	
+	.top-lg 
+		@include top
+
+	.middle-lg 
+		@include middle
+
+	.bottom-lg 
+		@include bottom
+
+	.around-lg 
+		@include around
+
+	.between-lg 
+		@include between
+
+	.first-lg 
+		@include first
+
+	.last-lg 
+		@include last
+	

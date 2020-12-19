@@ -1,0 +1,105 @@
+button, input[type=submit], input[type=button] 
+	cursor: pointer
+
+
+textarea 
+	max-width: 100% 
+
+input, textarea, select, button 
+	font-family: $font-default, sans-serif 
+	outline: none 
+	
+input[type=submit], input[type=button], button, input[type=reset] 
+	cursor: pointer 
+	-webkit-appearance:none 
+	border: none 
+
+input[type=text], input[type=date], input[type=number], input[type=email], textarea 
+	-webkit-appearance: none 
+
+input[type=button]::-moz-focus-inner, input[type=submit]::-moz-focus-inner, button[type=submit]::-moz-focus-inner
+	padding: 0
+	border: 0
+
+::-webkit-input-placeholder 
+	color:#c7cbcd
+	opacity: 1
+
+::-moz-placeholder 
+	color:#c7cbcd
+	opacity: 1
+
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button 
+	/* display: none <- Crashes Chrome on hover */
+	-webkit-appearance: none
+	margin: 0
+
+
+*[autofocus]::-moz-placeholder:focus  
+	color: graytext !important 
+*[autofocus]:-moz-placeholder:focus  
+	color: graytext !important
+*[autofocus]::-webkit-input-placeholder  
+	color: graytext !important
+
+
+
+.btn 
+	display: inline-block
+	vertical-align: middle
+	text-decoration: none
+	text-align: center
+	box-sizing: border-box
+	transition: all 0.2s ease
+
+
+	&.disabled, .btn.disabled:hover, .btn.disabled:focus 
+		background: #ccc
+		cursor: default
+	
+
+	&:hover 
+		text-decoration: none
+	
+
+	&:focus 
+		text-decoration: none
+	
+	
+	&.size-s 
+		
+	
+	
+	&.btn--grey 
+		
+	
+
+
+
+
+.inp 
+	display: inline-block
+	vertical-align: middle
+	box-sizing: border-box
+	transition: all 0.2s ease
+
+
+	&.size--s 
+		height: 44px
+		padding: 0 15px
+		font-size: 17px
+		position: relative
+	
+
+	&.error 
+		border: 2px solid #f93f3f
+	
+	
+	
+	&.inp--white 
+		
+	
+	

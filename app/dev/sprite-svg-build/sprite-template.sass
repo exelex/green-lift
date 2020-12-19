@@ -1,0 +1,23 @@
+@mixin mixin-i
+	display: inline-block
+	vertical-align: middle
+	background-image: url(../img/sprite.svg)
+	background-repeat: no-repeat
+
+.i
+	@include mixin-i
+
+
+
+{{#shapes}} 
+
+@mixin mixin-i-{{base}} 
+	width: {{width.inner}}px
+	height: {{height.inner}}px
+	background-position: {{position.absolute.x}}px {{position.absolute.y}}px
+	
+.i.i-{{base}} 
+	@include mixin-i-{{base}}
+
+
+{{/shapes}}

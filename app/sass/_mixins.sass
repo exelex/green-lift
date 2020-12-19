@@ -1,0 +1,90 @@
+/* Triangle */
+@mixin triangle($width, $height, $color, $direction) 
+	content: ''
+	position: absolute
+	width: 0
+	height: 0
+	display: block
+	z-index: 2
+ 
+	// Right
+	@if $direction == right 
+		border-top: $height/2 solid transparent
+		border-bottom: $height/2 solid transparent
+		border-left: $width solid $color
+		border-right: none
+	
+
+	// Left
+	@if $direction == left 
+		border-top: $height/2 solid transparent
+		border-bottom: $height/2 solid transparent
+		border-right: $width solid $color
+		border-left: none
+	
+
+	// Up
+	@if $direction == up 
+		border-left: $width/2 solid transparent
+		border-right: $width/2 solid transparent
+		border-bottom: $height solid $color
+		border-top: none
+	
+
+	// Down
+	@if $direction == down 
+		border-left: $width/2 solid transparent
+		border-right: $width/2 solid transparent
+		border-top: $height solid $color
+		border-bottom: none
+	
+		
+
+
+@mixin border-radius($size) 
+	border-radius: $size 
+
+
+@mixin border-box 
+	box-sizing: border-box
+
+
+@mixin rotate ($size) 
+	transform: rotate($size+deg) 
+
+
+@mixin opacity ($size) 
+	opacity: $size
+
+
+@mixin gradient ($s1, $s2, $s3) 
+	background: linear-gradient(to $s1, $s2, $s3)
+
+
+@mixin shadow ($s1, $s2, $s3, $s4, $s5, $s6, $s7) 
+	box-shadow: $s1+px $s2+px $s3+px rgba($s4, $s5, $s6, $s7)
+
+
+@mixin transition ($s1, $s2) 
+	transition: $s1 $s2
+
+
+@mixin transform($type) 
+	transform: $type
+
+
+@mixin vertical-center 
+	position: relative
+	top: 50%
+	transform: translateY(-50%)
+
+
+@mixin filter($type) 
+	filter: $type
+
+
+@mixin mtb 
+	& > *:first-child 
+		margin-top: 0 !important 
+	& > *:last-child 
+		margin-bottom: 0 !important 

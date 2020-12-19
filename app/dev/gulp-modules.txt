@@ -1,0 +1,10 @@
+gulp
+gulp-sass
+browser-sync
+del
+gulp-rename
+gulp-autoprefixer
+gulp-svg-sprite
+gulp-svgmin
+gulp-cheerio
+gulp-replace

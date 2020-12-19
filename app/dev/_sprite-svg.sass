@@ -1,0 +1,51 @@
+@mixin mixin-i
+	display: inline-block
+	vertical-align: middle
+	background-image: url(../img/sprite.svg)
+	background-repeat: no-repeat
+
+.i
+	@include mixin-i
+
+
+
+
+@mixin mixin-i-apple 
+	width: 23px
+	height: 28px
+	background-position: 0px 0px
+	
+.i.i-apple 
+	@include mixin-i-apple
+
+
+
+@mixin mixin-i-diamond 
+	width: 36px
+	height: 35px
+	background-position: -23px -28px
+	
+.i.i-diamond 
+	@include mixin-i-diamond
+
+
+
+@mixin mixin-i-insta 
+	width: 16px
+	height: 16px
+	background-position: -59px -63px
+	
+.i.i-insta 
+	@include mixin-i-insta
+
+
+
+@mixin mixin-i-vk 
+	width: 16px
+	height: 9px
+	background-position: -75px -79px
+	
+.i.i-vk 
+	@include mixin-i-vk
+
+

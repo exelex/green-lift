@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<link rel="stylesheet" href="css/main.min.css" type="text/css" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- jquery 2.2.3 -->
+	<script src="js/jquery.min.js"></script>
+</head>
+
+
+<body>
+	<div id="wrapper">
+
+		<!-- ********** HEADER ********** -->
+
+		<header id="header">
+			<div class="inner-wrapper">
+				<div class="header__wrapper">
+					<div class="h-logo">
+						<a href="/">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					
+					
+					
+					<div class="h-menu-btn"></div>
+					
+					
+					
+					<div class="h-center">
+						<div class="h-info">
+							<div class="h-center__control">
+								<div class="h-menu-btn"></div>
+								
+								<div class="h-calendar-btn"></div>
+							</div>
+							
+							<div class="h-weather">
+								<div class="h-weather__icon">
+									<img src="img/icon_weather_sun.png" alt="">
+								</div>
+								
+								<div class="wrap">
+									<div class="title">Ташкент, солнечно</div>
+									<div class="stat">
+										день <strong>+25</strong>, ночь <strong>+18</strong>
+									</div>
+								</div>
+							</div>
+							
+							<div class="h-money">
+								<div class="h-money__top">
+									<span class="item">
+										USD <strong>8146,38</strong>
+									</span>
+								</div>
+								     
+ 
+								<div class="h-money__bottom">
+									<span class="item">
+										RUB <strong>143,97</strong>
+									</span>
+									
+									<span class="item">
+										EUR <strong>9965,47</strong>
+									</span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="h-search">
+							<form action="">
+								<input class="h-search__field" type="text" placeholder="искать сотрудника, документ, прочее...">
+								
+								<button class="h-search__btn"  type="submit"></button>
+							</form>
+						</div>
+					</div>
+					
+					
+					<div class="h-user">
+						<div class="h-search-mobile"></div>
+						
+						<div class="h-user__info">
+							<a class="link" href=""></a>
+							
+							<div class="h-user__ava" style="background-image: url(img/ava1.png)">
+								<span class="num">3</span>
+							</div>
+							
+							<div class="wrap">
+								<div class="name">Ахмедова Диана Икрамовна</div>
+								<div class="text">Ведущий специалист по связям с общественностью</div>
+							</div>
+							
+							<div class="h-user__logout"></div>
+						</div>
+						
+						<div class="h-user__links">
+							<div class="l">
+								<a href="" class="h-user__link">мой профиль</a>
+							</div>
+							
+							<div class="r">
+								<a href="" class="h-user-link icon icon-cloud"></a>
+								<a href="" class="h-user-link icon icon-mail"></a>
+								<a href="" class="h-user-link icon icon-q"></a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="header-bg header-bg--center"></div>
+					<div class="header-bg header-bg--right"></div>
+				</div>
+			</div>
+			<!-- end inner-wrapper -->
+		</header>
+		<!-- end header -->
+		
+		
+		
+		<nav class="mobile-menu">
+			<div class="mobile-menu__wrap">
+				<div class="item js-menu">
+					<div class="item__title js-menu-btn">Компания</div>
+					
+					<div class="item__hidden js-menu-hidden">
+						<div class="item js-menu">
+							<div class="item__title js-menu-btn">О компании</div>
+							
+							<div class="item__hidden js-menu-hidden">
+								<div class="item">
+									<a class="item__link" href="">
+										новости компании
+									</a>
+									
+									<a class="item__link" href="">
+										Новости отрасли
+									</a>
+									
+									<a class="item__link" href="">
+										Новости законодательства
+									</a>
+									
+									<a class="item__link" href="">
+										Наша жизнь
+									</a>
+									
+									<a class="item__link" href="">
+										Фотогалерея
+									</a>
+									
+									<a class="item__link" href="">
+										Видеогалерея
+									</a>
+									
+									<a class="item__link" href="">
+										Карьера, вакансии
+									</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="item js-menu">
+							<div class="item__title js-menu-btn">конкурсы</div>
+							
+							<div class="item__hidden js-menu-hidden">
+								<div class="item">
+									<a class="item__link" href="">
+										конкурс детского рисунка
+									</a>
+									
+									<a class="item__link" href="">
+										положение о проведении конкурса
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item js-menu">
+					<div class="item__title js-menu-btn">сотрудники</div>
+					
+					<div class="item__hidden js-menu-hidden">
+						<div class="item js-menu">
+							<div class="item__title js-menu-btn">конкурсы</div>
+							
+							<div class="item__hidden js-menu-hidden">
+								<div class="item">
+									<a class="item__link" href="">
+										конкурс детского рисунка
+									</a>
+									
+									<a class="item__link" href="">
+										положение о проведении конкурса
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item js-menu">
+					<div class="item__title js-menu-btn">сервисы</div>
+					
+					<div class="item__hidden js-menu-hidden">
+						<div class="item js-menu">
+							<div class="item__title js-menu-btn">конкурсы</div>
+							
+							<div class="item__hidden js-menu-hidden">
+								<div class="item">
+									<a class="item__link" href="">
+										конкурс детского рисунка
+									</a>
+									
+									<a class="item__link" href="">
+										положение о проведении конкурса
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<a href="" class="item__title">лайфхаки</a>
+				</div>
+				
+				<div class="item">
+					<a href="" class="item__title">группы</a>
+				</div>
+			</div>
+		</nav>
+		
+		
+		<div class="mobile-menu-overlay"></div>
+		
+		
+		
+		<nav class="main-menu">
+			<div class="inner-wrapper">
+				<div class="main-menu__wrapper">
+					<div class="main-menu__item --home">
+						<a class="main-menu__link" href="/">
+							<span class="icon icon-home"></span>
+						</a>
+					</div>
+					
+					<div class="main-menu__item">
+						<a href="" class="main-menu__link">Компания</a>
+						
+						<div class="main-menu__hidden">
+							<div class="wrap">
+								<div class="wrap__pointer"></div>
+								
+								<div class="wrap__left">
+									<!-- активация правой колонки меню по атрибуту 
+										data-target у кнопки и id у блока -->
+									<div class="hidden-item">
+										<div class="hidden-item__title active" data-target="main-menu-about">О компании</div>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<div class="hidden-item__title" data-target="main-menu-today">Компания сегодня</div>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<div class="hidden-item__title" data-target="main-menu-readme">Руководство</div>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<a href="" class="hidden-item__title">Обращения руководства</a>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<a href="" class="hidden-item__title">Миссия и стратегия</a>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<a href="" class="hidden-item__title">История компании</a>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<a href="" class="hidden-item__title">Корпоративная культура</a>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<a href="" class="hidden-item__title">Контакты</a>
+									</div>
+								</div>
+								
+								
+								
+								<div class="wrap__right">
+									<!-- при первом открытии активен первый пункт (указан класс open и style="display: block") -->
+									<div class="hidden-item__wrap open" id="main-menu-about" style="display: block; ">
+										<div class="item__link">
+											<a href="">новости компании</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Новости отрасли</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Новости законодательства</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Наша жизнь</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Фотогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Видеогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Карьера, вакансии</a>
+										</div>
+									</div>
+									
+									
+									<div class="hidden-item__wrap" id="main-menu-today">
+										<div class="item__link">
+											<a href="">Новости законодательства</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Наша жизнь</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Фотогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Видеогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Карьера, вакансии</a>
+										</div>
+									</div>
+									
+									
+									<div class="hidden-item__wrap" id="main-menu-readme">
+										
+										<div class="item__link">
+											<a href="">Наша жизнь</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Фотогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Наша жизнь</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Фотогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Видеогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Карьера, вакансии</a>
+										</div>
+									</div>
+									
+									
+									
+								</div>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="main-menu__item">
+						<a href="" class="main-menu__link">Сотрудники</a>
+						
+						
+						<div class="main-menu__hidden">
+							<div class="wrap">
+								<div class="wrap__pointer"></div>
+								
+								<div class="wrap__left">
+									<div class="hidden-item">
+										<div class="hidden-item__title active" data-target="main-menu-contest">Конкурсы</div>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<div class="hidden-item__title" data-target="main-menu-notice">памятка сотрудника</div>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<div class="hidden-item__title" data-target="main-menu-search">поиск сотрудника</div>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<a href="" class="hidden-item__title">телефонный справочник</a>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<a href="" class="hidden-item__title">структура компании</a>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<a href="" class="hidden-item__title">кадровые изменения</a>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<a href="" class="hidden-item__title">график отсутствий</a>
+									</div>
+									
+									
+									<div class="hidden-item">
+										<a href="" class="hidden-item__title">дни рождения</a>
+									</div>
+								</div>
+								
+								
+								
+								<div class="wrap__right">
+									<div class="hidden-item__wrap open" id="main-menu-contest" style="display: block; ">
+										<div class="item__link">
+											<a href="">конкурс детского рисунка</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">положение о проведении к</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Новости законодательства</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Наша жизнь</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Фотогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Видеогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Карьера, вакансии</a>
+										</div>
+									</div>
+									
+									
+									<div class="hidden-item__wrap" id="main-menu-notice">
+										<div class="item__link">
+											<a href="">Новости законодательства</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Наша жизнь</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Фотогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Видеогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Карьера, вакансии</a>
+										</div>
+									</div>
+									
+									
+									<div class="hidden-item__wrap" id="main-menu-search">
+										<div class="item__link">
+											<a href="">Новости законодательства</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Наша жизнь</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Фотогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Видеогалерея</a>
+										</div>
+										
+										<div class="item__link">
+											<a href="">Карьера, вакансии</a>
+										</div>
+									</div>
+									
+								</div>
+								
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="main-menu__item">
+						<a href="" class="main-menu__link">Сервисы</a>
+					</div>
+					
+					<div class="main-menu__item">
+						<a href="" class="main-menu__link">Лайфхаки</a>
+					</div>
+					
+					<div class="main-menu__item">
+						<a href="" class="main-menu__link">Группы</a>
+					</div>
+					
+					<div class="main-menu__item">
+						<a href="" class="main-menu__link">Техника безопасности</a>
+					</div>
+					
+					<div class="main-menu__item">
+						<a href="" class="main-menu__link">История успеха </a>
+					</div>
+					
+					<div class="main-menu__item --hot">
+						<a href="" class="main-menu__link">Горячая линия</a>
+					</div>
+				</div>
+			</div>
+			<!-- end inner-wrapper -->
+		</nav>
+
+
+
+		<nav class="breadcrumbs">
+			<div class="inner-wrapper">
+				<div class="breadcrumbs__wrapper">
+					<div class="item">
+						<a href="/">Главная страница</a>
+					</div>
+					
+					<div class="item">
+						<a href="">Компания</a>
+					</div>
+					
+					<div class="item">
+						Компания сегодня
+					</div>
+				</div>
+			</div>
+			<!-- end inner-wrapper -->
+		</nav>
+		<!-- end breadcrumbs -->
+
+
+
+
+		<!-- ********** MAIN ********** -->
+
+		<section id="main">
+			<div class="inner-wrapper">
+				<div class="page-inner">
+					<section class="page-inner__content">
+						<div class="page-inner__title">
+							<div class="i">
+								<span class="icon icon-house2"></span>
+							</div>
+							
+							<div class="wrap">
+								<div class="title">
+									Компания сегодня
+								</div>
+							</div>
+						</div>
+						
+						
+						<article class="article">
+							<div class="img-left">
+								<img src="img/img10.jpg" alt="">
+							</div>
+							
+							<p>Мы рады сообщить Вам, что компания «Enter Engineering Pte.Ltd.» признана победителем Конкурсных торгов по выбору Генерального подрядчика для выполнения работ по проекту «Строительство технологических объектов на месторождениях АК «Узнефтегаздобыча» «под ключ» и получила право на заключение контракта.</p>
+							
+							<p>Мы рады сообщить Вам, что компания «Enter Engineering Pte.Ltd.» признана победителем Конкурсных торгов по выбору Генерального подрядчика для </p>
+							
+							<p>Мы рады сообщить Вам, что компания «Enter Engineering Pte.Ltd.» признана победителем Конкурсных торгов по выбору Генерального подрядчика для выполнения работ по проекту «Строительство технологических объектов на месторождениях АК «Узнефтегаздобыча» «под ключ» и получила право на заключение контракта.</p>
+							
+							<p>Мы рады сообщить Вам, что компания «Enter Engineering Pte.Ltd.» признана победителем Конкурсных торгов по выбору Генерального подрядчика для выполнения работ по проекту «Строительство технологических объектов. Мы рады сообщить Вам, что компания «Enter Engineering Pte.Ltd.» признана победителем Конкурсных торгов по выбору Генерального подрядчика для выполнения работ по проекту «Строительство технологических объектов на месторождениях АК «Узнефтегаздобыча» «под ключ» и получила право на заключение контракта.</p>
+							
+							<p>Мы рады сообщить Вам, что компания «Enter Engineering Pte.Ltd.» признана победителем Конкурсных торгов по выбору Генерального подрядчика для выполнения работ по проекту «Строительство технологических объектов на месторождениях АК «Узнефтегаздобыча» «под ключ» и получила право на заключение контракта.</p>
+						</article>
+						
+					</section>
+					<!-- end page-inner__content -->
+					
+					
+					
+					<aside class="page-inner__cat-menu hidden-sm hidden-xs">
+						<div class="category-menu open">
+							<div class="category-menu__btn"></div>
+							
+							<div class="category-menu__list">
+								<div class="item js-show">
+									<div class="item__btn js-show-btn">
+										о компании
+									</div>
+									
+									<div class="item__hidden js-show-hidden">
+										<div class="item">
+											<a href="">компания сегодня</a>
+										</div>
+										
+										<div class="item">
+											<a href="">Руководство</a>
+										</div>
+										
+										<div class="item">
+											<a href="">Миссия и стратегия</a>
+										</div>
+										
+										<div class="item">
+											<a href="">История компании</a>
+										</div>
+										
+										<div class="item">
+											<a href="">Корпоративная культура</a>
+										</div>
+										
+										<div class="item">
+											<a href="">Контакты</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="item js-show">
+									<div class="item__btn js-show-btn">
+										Новости компании
+									</div>
+									
+									<div class="item__hidden js-show-hidden">
+										<div class="item">
+											<a href="">Миссия и стратегия</a>
+										</div>
+										
+										<div class="item">
+											<a href="">История компании</a>
+										</div>
+										
+										<div class="item">
+											<a href="">Корпоративная культура</a>
+										</div>
+										
+										<div class="item">
+											<a href="">Контакты</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="item js-show">
+									<div class="item__btn js-show-btn">
+										Новости отрасли
+									</div>
+									
+									<div class="item__hidden js-show-hidden">
+										<div class="item">
+											<a href="">История компании</a>
+										</div>
+										
+										<div class="item">
+											<a href="">Корпоративная культура</a>
+										</div>
+										
+										<div class="item">
+											<a href="">Контакты</a>
+										</div>
+									</div>
+								</div>
+								
+								<div class="item">
+									<a class="item__btn" href="">
+										Новости законодательства
+									</a>
+								</div>
+								
+								<div class="item">
+									<a class="item__btn" href="">
+										Наша жизнь
+									</a>
+								</div>
+								
+								<div class="item">
+									<a class="item__btn" href="">
+										Фотогалерея
+									</a>
+								</div>
+								
+								<div class="item">
+									<a class="item__btn" href="">
+										Видеогалерея
+									</a>
+								</div>
+								
+								<div class="item">
+									<a class="item__btn" href="">
+										Карьера, вакансии
+									</a>
+								</div>
+							</div>
+						</div>
+					</aside>
+					<!-- end page-inner__cat-menu -->
+				</div>
+			</div>
+			<!-- end inner-wrapper -->
+		</section>
+		<!-- end main -->
+	</div>
+	<!-- end wrapper -->
+
+
+	
+	<!-- ********** FOOTER ********** -->
+
+	<footer id="footer">
+		<div class="inner-wrapper">
+			<div class="footer__wrapper">
+				<div class="copyrights">
+					<div>© 2001-2018 «Битрикс», «1С-Битрикс». Работает на 1С-Битрикс: Корпоративный портал </div>
+					<div>Все права защищены.</div>
+				</div>
+				
+				<div class="footer__menu">
+					<a href="">Версия для печати</a>
+					<a href="">Контакты</a>
+					<a href="">Поиск</a>
+					<a href="">Карта портала</a>
+					<a href="">Помощь</a>
+				</div>
+				
+				
+				<div class="footer__bg footer__bg--left"></div>
+				<div class="footer__bg footer__bg--center"></div>
+				<div class="footer__bg footer__bg--right"></div>
+			</div>
+		</div>
+		<!-- end inner-wrapper -->
+	</footer>
+	<!-- end footer -->
+	
+	
+	
+	<!-- слайдеры -->
+	<script src="js/slick.min.js"></script>
+	
+	
+	<!-- табы, календарь, селекты -->
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/datepicker-ru.js"></script>
+
+	
+	<!-- other and js plugins init -->
+	<script src="js/main.js"></script>
+	
+</body>
+</html>
