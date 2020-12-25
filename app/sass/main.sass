@@ -62,6 +62,9 @@
 	
 	& > .inner-wrapper
 		+mtb
+		
+.main__wrapper
+	margin-top: 30px
 	
 
 /* ****** breadcrumbs ****** */
@@ -389,8 +392,104 @@
 					filter: brightness(2)
 					
 					
-		
+					
+/* ****** news-detail ****** */
+.news-detail 
 	
+	&__img
+		margin-bottom: 15px
+		
+		img
+			min-width: 100%
+			
+	&__desc
+		margin: 17px 0 10px
+		
+		.date
+			padding-left: 42px
+			position: relative
+			font-size: 13px
+			font-weight: 300
+			
+			&:before
+				content: ""
+				position: absolute
+				top: calc(50% - 16px)
+				left: 0px
+				width: 32px
+				height: 32px
+				background: #EFEFEF
+				border-radius: 50%
+				
+			&:after
+				content: ""
+				position: absolute
+				top: calc(50% - 8px)
+				left: 8px
+				@include mixin-i
+				@include mixin-i-clock
+				
+	&__imgs
+		margin: 12px 0 15px
+		
+		
+		
+.nav-back
+	margin-top: 28px
+			
+
+					
+					
+		
+/* ****** aside-news ****** */
+.aside-news
+	
+	.title
+		margin-bottom: 23px
+		font-size: 16px
+		font-weight: bold
+		text-transform: uppercase
+	
+	.item
+		
+		& + .item
+			margin-top: 20px
+			
+		&__img
+			position: relative
+			
+			a
+				display: block
+				
+				img
+					width: 100%
+					
+		&__title
+			margin-top: 9px
+			font-family: $font-title, sans-serif
+			font-size: 15px
+			font-weight: bold
+			
+		&__text
+			margin-top: 6px
+			font-size: 14px
+			color: #616267
+			
+		&__bottom
+			margin-top: 5px
+			
+			.link-detail
+				font-weight: 500
+				color: #71AB36
+				text-decoration: none
+				
+				.t
+					text-decoration: underline
+					
+				&:hover
+					.t
+						text-decoration: none
+
 
 
 
