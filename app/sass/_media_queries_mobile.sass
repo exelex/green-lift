@@ -1,0 +1,1225 @@
+
+
+/* media queries phone 320 - 768 */
+@media (min-width: $screen-xxs-min) and (max-width: $screen-xs-max)
+
+	.hidden-xs 
+	   display: none !important
+  
+	.visible-xs 
+		display: block !important 
+		
+	ul
+		li
+			margin-left: 0
+		
+	.inner-wrapper
+		padding-left: $wrapper-padding-mobile
+		padding-right: $wrapper-padding-mobile
+		
+	#header
+		padding: 13px 0 15px
+		
+		.inner-wrapper
+			display: flex
+			align-items: center
+			justify-content: space-between
+			position: relative
+			
+	.h-logo
+		margin-left: 40px
+		
+		a
+			width: 100px
+			display: block
+			
+			img
+				width: 100%
+				display: inline-block
+				vertical-align: top
+				
+	
+	.h-contacts
+		flex: 0 1 auto
+		display: flex
+		align-items: center
+		
+		&__phone
+			position: relative
+			
+			.title
+				font-size: 10px
+				
+			.t
+				line-height: 26px
+				white-space: nowrap
+				position: relative
+				
+				&:before
+					content: ""
+					position: absolute
+					top: 4px
+					left: -21px
+					@include mixin-i
+					@include mixin-i-phone3
+					transform: scale(0.75)
+				
+				a
+					font-size: 14px
+					color: $c-default
+					text-decoration: none
+					
+					&:hover
+						text-decoration: underline
+						
+		&__callback
+			display: none
+		
+	.title-leaf
+		text-align: center
+		font-size: 20px
+		
+		.title
+			&:before
+				transform: scale(0.75)
+				position: absolute
+				top: -40px
+				left: calc(50% - 30px)
+				
+	.mobile-menu__btn
+		position: absolute
+		top: calc(50% - 30px)
+		left: -1px
+		width: 60px
+		height: 60px
+		display: flex
+		align-items: center
+		justify-content: center
+			
+		span
+			@include mixin-i
+			@include mixin-i-lines
+			
+	.main-menu
+		display: none
+				
+				
+	.sect-main
+		padding: 5px 0 34px
+		background: url(../img/bg_top.jpg) 50% 0 no-repeat
+		background-size: cover
+		
+		&__info
+		
+			.title
+				font-family: $font-title, sans-serif
+				font-size: 21px
+				font-weight: bold
+				line-height: 1.2
+			
+			.text
+				margin-top: 13px
+				font-size: 14px
+				font-weight: 300
+				color: #606168
+				
+			.list, .bottom
+				display: none
+			
+				
+		&__details
+			margin-top: 7px
+			text-align: center
+			
+			.btn
+				min-width: 290px
+				height: 50px
+				padding-left: 28px
+				padding-right: 28px
+				
+				.icon
+					margin-left: 22px
+					
+		&__catalog
+			margin-top: 32px
+			position: relative
+					
+		
+		&__slider
+			margin: 0 -($wrapper-padding-mobile)
+			
+			.item
+				.item__wrap
+					height: 80vw
+					display: flex
+					align-items: center
+					padding: 20px $wrapper-padding-mobile 20px calc(15px + 2%)
+					
+					img
+						max-width: 95%
+						max-height: 95%
+				
+				.img-front
+					position: relative
+					z-index: 1
+				
+				.img-back
+					position: absolute
+					top: 6%
+					left: 23%
+					filter: blur(5px)
+					transform: scale(0.6)
+				
+					
+		&__carousel
+			margin-left: -($wrapper-padding-mobile)
+			margin-right: -66vw
+			
+			.item
+				&__wrap
+					margin: 15px 0 15px 15px
+					padding: 13px 20px 13px 12px
+					min-height: 90px
+					background: #fff
+					box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+					border-radius: 7px
+					opacity: 0.5
+					transition: opacity 0.3s ease
+					display: flex
+					align-items: center
+				
+				
+					&:hover
+						opacity: 1
+						
+				
+				&__img
+					width: 52px
+					height: 55px
+					flex: 0 1 auto
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-right: 10px
+					
+					img
+						max-width: 100%
+						max-height: 100%
+						display: inline-block
+						vertical-align: middle
+					
+				&__b
+					flex: 1 1 0
+					
+				&__title
+					font-size: 14px
+					font-weight: bold
+					line-height: 1.35
+				
+				&__text
+					margin-top: 4px
+					font-size: 12px
+					font-weight: 300
+					color: #4A780B
+					
+					
+		&__arrows
+			position: absolute
+			top: calc(41vw - 25px)
+			right: 5px
+			z-index: 2
+			
+			*
+				margin-left: 7px
+					
+	
+	.sect-prod
+		padding: 20px 0 25px
+	
+		.inner-wrapper
+			position: relative
+			padding: 0 0 87px
+			
+		&__text
+			max-width: 320px
+			margin: 0 auto
+			text-align: center
+			
+			.text
+				margin-top: 4px
+				font-size: 15px
+	
+		&__carousel
+			margin: 25px 0 0
+			overflow: hidden
+			
+			.item
+				&__wrap
+					margin: 20px 10px 35px $wrapper-padding-mobile
+					padding: 19px 15px 0
+					box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+					border-radius: 7px
+					background: #fff
+					text-align: center
+					
+				&__img
+					height: 143px
+					display: flex
+					align-items: center
+					justify-content: center
+					
+					img
+						max-height: 100%
+						position: relative
+						
+				&__title
+					min-height: 40px
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-top: 12px
+					font-size: 16px
+					line-height: 1.2
+					
+				&__bottom
+					height: 23px
+					margin-top: 12px
+					
+					.btn
+						min-width: 170px
+					
+					
+		&__control
+			position: absolute
+			bottom: 35px
+			left: $wrapper-padding
+			right: $wrapper-padding
+			display: flex
+			justify-content: center
+			
+		&__arrows
+			margin-left: 25px
+			
+			* + *
+				margin-left: 7px
+			
+			
+				
+	.sect-why
+		margin-top: 55px
+		
+		&__list
+			max-width: 360px
+			margin: 24px auto 0
+			
+			.item
+				margin-top: 15px
+				position: relative
+				
+				&__icon
+					position: absolute
+					
+				&__title
+					display: flex
+					align-items: center
+					padding-right: 10%
+					line-height: 1.3
+					
+					
+	.sect-news
+		margin: 64px 0 35px
+		
+		.inner-wrapper
+			padding-left: 0
+			padding-right: 0
+			
+		&__control
+			margin-top: 11px
+			text-align: center
+			
+			* + *
+				margin-left: 10px
+	
+		&__carousel
+			max-width: 400px
+			margin: 12px auto 0
+			
+			
+			.item
+				&__wrap
+					margin: 10px $wrapper-padding-mobile
+					
+				&__img
+					padding-bottom: 62%
+					
+				&__title
+					margin-top: 16px
+					font-size: 15px
+					font-weight: bold
+					line-height: 1.4
+					
+				&__text
+					margin-top: 11px
+					font-size: 13px
+					line-height: 1.5
+					
+				&__bottom
+					margin-top: 6px
+					
+					.link-detail
+						font-size: 14px
+						
+						.t
+							margin-right: 5px
+					
+					
+					
+	
+	.sect-feedback
+		padding: 19px 0 33px
+		margin-top: 42px
+		
+		&__wrapper
+			display: flex
+			flex-direction: column
+			
+		&__text
+			max-width: 350px
+			order: 1
+			display: flex
+			align-items: center
+			flex-direction: column
+			margin: 0 auto
+			
+			.text
+				margin-top: 5px
+				font-size: 15px
+				font-weight: 300
+				color: #55565E
+				text-align: center
+				line-height: 1.45
+			
+		&__slider
+			order: 2
+			margin-left: -($wrapper-padding-mobile)
+			margin-right: -($wrapper-padding-mobile)
+			
+			.item
+				display: flex
+				justify-content: center
+			
+				&__wrap
+					margin: 58px $wrapper-padding-mobile 20px
+					max-width: 400px
+					padding: 37px 24px 21px
+					background: #fff
+					box-shadow: 0 0 24px rgba(0,0,0,0.06)
+					border-radius: 7px
+					
+				&__ava
+					position: absolute
+					top: -41px
+					left: calc(50% - 34px)
+					width: 68px
+					height: 68px
+					
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+						border-radius: 50%
+						
+					&:before
+						content: ""
+						position: absolute
+						top: 15px
+						right: -97px
+						@include mixin-i
+						@include mixin-i-quotes
+						transform: scale(0.7)
+						
+				&__link
+					margin-top: 12px
+					text-align: center
+					
+				&__name
+					font-size: 16px
+					line-height: 1.4
+					text-align: center
+				
+				&__text
+					margin-top: 12px
+					font-size: 14px
+					font-weight: 300
+					color: #3D3D45
+					line-height: 1.7
+					
+			
+		&__control
+			order: 3
+			width: 280px
+			margin: 0 auto
+			text-align: center
+			display: flex
+			flex-direction: column
+			
+			.btn
+				width: 100%
+				order: 2
+				margin-top: 23px
+			
+			
+			
+		&__arrows
+			order: 1
+			
+			* + *
+				margin-left: 10px
+				
+				
+	
+	.sect-contacts
+		position: relative
+		overflow: hidden
+		
+		.inner-wrapper
+			padding-left: 0
+			padding-right: 0
+		
+		&__content
+
+			.wrap
+				max-width: 380px
+				margin: 0 auto
+				padding: 53px $wrapper-padding-mobile 14px
+				
+		&__list
+			margin: 14px 0 10px
+			+mtb
+		
+			.item
+				padding-left: 35px
+				margin: 10px 0 5px
+				font-size: 15px	
+				font-weight: 300
+				line-height: 1.55
+				position: relative
+				color: #55565E
+				
+				a
+					color: $c-link-green
+					
+				.icon
+					position: absolute
+					left: 0
+					top: 1px
+					height: 20px
+					display: flex
+					align-items: center
+			
+				&.--phone
+					font-size: 17px
+					
+					a
+						color: #3D3F49
+						text-decoration: none
+						
+						&:hover
+							color: $c-link
+					
+				&.--mail
+					font-size: 16px
+					
+		&__callback
+			display: none
+			
+		&__map
+			height: 87vw
+			max-height: 450px
+			
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				
+				
+				
+	
+	.page-404
+		display: flex
+		flex-direction: column
+		margin-top: 35px
+		
+		&__l
+			order: 2
+			margin-top: 20px
+			+mtb
+			
+		&__r
+			order: 1
+			
+			.bottom
+				margin-top: 45px
+			
+		&__img
+			width: 85%
+			max-width: 470px
+			
+		&__menu
+			margin-top: 45px
+			
+			
+			
+	.feedback
+		&__list
+			margin-top: 30px
+			
+			.item
+				display: flex
+				justify-content: center
+			
+				&__wrap
+					margin: 58px 0 20px
+					max-width: 400px
+					padding: 37px 24px 21px
+					background: #fff
+					box-shadow: 0 0 24px rgba(0,0,0,0.06)
+					border-radius: 7px
+					
+				
+				&__top
+					display: block
+					
+				&__ava
+					position: absolute
+					top: -41px
+					left: calc(50% - 34px)
+					width: 68px
+					height: 68px
+					
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+						border-radius: 50%
+						
+					&:before
+						content: ""
+						position: absolute
+						top: 15px
+						right: -97px
+						@include mixin-i
+						@include mixin-i-quotes
+						transform: scale(0.7)
+						
+				&__link
+					margin-top: 22px
+					text-align: center
+					
+				&__name
+					font-size: 16px
+					line-height: 1.4
+					text-align: center
+				
+				&__text
+					margin-top: 22px
+					font-size: 14px
+					font-weight: 300
+					color: #3D3D45
+					line-height: 1.7
+					
+					
+					
+	.pagination
+		max-width: 340px
+		margin: 32px auto 0
+		flex-wrap: wrap
+		
+		.item
+		
+			&--last
+				order: -1
+				align-self: flex-end
+				
+		
+		
+	#footer
+		padding-top: 15px
+		border-top: 1px solid #eee
+	
+		.inner-wrapper
+			display: flex
+			flex-direction: column
+			padding-left: 0
+			padding-right: 0
+			
+		.f-nav
+			order: 1
+			
+		.f-contacts
+		 	order: 3
+			
+		.f-left
+			order: 4
+			padding: 15px $wrapper-padding-mobile
+			margin-top: 15px
+			border-top: 1px solid #eee
+			text-align: center
+			
+			&__wrap
+				max-width: 290px
+				margin: 0 auto
+			
+	.f-logo
+		display: none
+		
+	.f-contacts, .f-nav
+		min-width: 280px
+		width: 280px
+		
+	.f-contacts
+		margin: 5px auto 0
+		
+		&__top
+			text-align: center
+			
+		
+		&__item
+			padding-left: 34px
+			margin: 8px 0 5px
+			font-size: 15px	
+			line-height: 1.55
+			font-weight: 300
+			
+			& + *
+				margin-top: 13px
+			
+			.icon
+				top: 3px
+				height: 20px
+				display: flex
+				align-items: center
+		
+			&.--phone
+				font-size: 17px
+				
+			&.--mail
+				font-size: 16px
+			
+	.f-nav
+		margin: 10px auto 5px
+		padding: 0 $wrapper-padding-mobile
+		text-align: center
+		
+		&__top
+			position: relative
+			padding-bottom: 7px
+			
+			.title
+				position: relative
+				
+				&:before
+					content: ""
+					position: absolute
+					top: calc(50% - 8px)
+					right: -22px
+					@include mixin-i
+					@include mixin-i-pointer3
+					transition: transform 0.3s ease
+	
+		&__btn
+			position: absolute
+			top: -5px
+			right: 0
+			bottom: -5px
+			left: 0
+			
+		&__wrap
+			display: none
+			+mtb
+			
+			& > div
+				margin: 7px 0
+				
+			
+		&.open
+			.title:before
+				transform: rotate(180deg)
+			
+	.copyrights
+		line-height: 1.55
+		
+		
+	
+	
+/* end media queries phone 320 - 768 */
+	
+	
+	
+	
+
+	
+
+
+/* media queries phone (650 - 768) */
+@media (min-width: 650px) and (max-width: $screen-xs-max)
+	
+	.sect-news
+		&__carousel
+			max-width: unset
+		
+			.item
+				&__wrap
+					margin-left: 20px
+					margin-right: 20px
+				
+	
+	
+
+
+/* media queries phone (480 - 768) */
+@media (min-width: $screen-xs-middle) and (max-width: $screen-xs-max)
+
+	
+	h1
+		font-size: 31px
+		
+	h2
+		font-size: 29px
+		
+	h3
+		font-size: 23px
+		
+	.content-title
+		h1
+			font-size: 31px
+			
+	.h-logo
+		margin-left: 46px
+		
+		a
+			width: 150px
+			
+	.h-contacts
+		&__phone
+			.title
+				font-size: 14px
+			
+			.t
+				&:before
+					left: -30px
+					transform: scale(1)
+				a
+					font-size: 17px
+					
+	.mobile-menu__btn
+		left: 2px
+		
+		span
+			transform: scale(1.25)
+
+	.sect-main
+		padding-top: 15px
+	
+		&__info
+			.title
+				font-size: 25px
+				
+			.text
+				font-size: 16px
+	
+		&__carousel
+			margin-right: -40vw
+			
+			.item
+				&__img
+					width: 80px
+					height: 80px
+					margin-right: 15px
+					
+				&__title
+					font-size: 15px
+					
+				&__text
+					font-size: 14px
+					
+					
+		&__arrows
+			right: 5px
+			
+		&__details
+			margin-top: 25px
+				
+
+	.sect-prod
+		padding-bottom: 0
+		
+		.inner-wrapper
+			position: relative
+			padding-bottom: 96px
+			
+		&__control
+			bottom: 26px
+			
+		&__carousel
+			margin-right: -28vw
+			
+	.sect-why
+		
+		&__list
+			
+			.item
+				padding: 24px 24px 22px
+				
+				&.--big
+					.item__icon
+						.i
+							transform: scale(0.45)
+							
+				
+				&__icon
+					height: 66px
+					top: 24px
+					left: 24px
+					
+					.i
+						transform: scale(0.85)
+						transform-origin: top left
+						
+				
+				&__title
+					padding-left: 58px
+					min-height: 49px
+					
+				&__text
+					margin-top: 12px
+					font-size: 15px
+  
+	.copyrights
+		font-size: 15px
+	
+	
+	.privacy-policy
+		margin-top: 22px
+		
+	#footer
+		
+		.f-left
+			padding-top: 25px
+			padding-bottom: 25px
+			
+			&__wrap
+				max-width: 320px
+			
+	.f-contacts
+		&__top
+			font-size: 15px
+			
+			
+		
+			
+	.f-nav
+	
+		&__top
+			font-size: 15px
+	
+		&__wrap
+			font-size: 15px
+			
+			& > div
+				margin: 7px 0
+
+
+/* end media queries phone 480 - 768 */
+
+
+
+
+
+
+
+
+/* media queries phone (320 - 480) */
+@media (min-width: $screen-xxs-min) and (max-width: $screen-xxs-max) 
+
+	h1
+		font-size: 25px
+		
+	h2
+		font-size: 27px
+		
+	h3
+		font-size: 22px
+		
+	.content-title
+		h1
+			font-size: 25px
+	
+	.sect-prod
+		.inner-wrapper
+			padding-bottom: 130px
+			
+		&__control
+			display: flex
+			flex-direction: column
+			align-items: center
+			bottom: 4px
+			
+			.btn
+				order: 2
+				margin-top: 20px
+				min-width: 280px
+				
+		
+		&__carousel
+			margin-right: -53vw
+				
+				
+		&__arrows
+			order: 1
+			margin-left: 0
+			
+	
+	.sect-why
+		
+		&__list
+			
+			.item
+				padding: 17px 17px 20px
+				
+				&.--big
+					.item__icon
+						.i
+							transform: scale(0.35)
+				
+				&__icon
+					height: 56px
+					top: 17px
+					left: 17px
+					
+					.i
+						transform: scale(0.75)
+						transform-origin: top left
+						
+				&__title
+					min-height: 41px
+					padding-left: 43px
+					
+				
+				&__text
+					margin-top: 10px
+					font-size: 14px
+
+	.copyrights
+		font-size: 12px
+		
+	
+	.privacy-policy
+		margin-top: 6px
+		
+		a
+			font-size: 12px
+			
+	
+	.page-404
+	
+		&__r
+			.bottom
+				margin-top: 33px
+		
+		&__menu
+			flex-wrap: wrap
+			margin-top: 35px
+			+mtb
+			
+			.col
+				min-width: 220px
+				margin-top: 25px
+				
+	
+	.pagination
+		max-width: 280px
+		
+		.item
+			
+			& + .item--last
+				margin-right: 0
+		
+			&--last
+				margin-left: 0
+				padding-left: 12px
+				padding-right: 12px
+				
+				
+				.i + .t
+					margin-left: 7px
+					
+				.t + .i
+					margin-left: 7px
+
+	.f-nav
+		&__wrap
+			font-size: 13px
+			
+			& > div
+				margin: 7px 0
+
+/* end media queries phone 320 - 480 */
+
+
+
+
+/* media queries phone (320 - 1100) */
+@media (min-width: $screen-xxs-min) and (max-width: $screen-sm-max) 
+
+	.mobile-menu
+		$mobile-menu-width: 290px
+		
+		position: fixed
+		top: 0
+		left: 0
+		max-width: $mobile-menu-width
+		width: $mobile-menu-width
+		background: #fff
+		z-index: 15
+		display: none
+		
+		&.opened
+			.mobile-menu__back
+				opacity: 1
+				visibility: visible
+				transition-delay: 0s
+
+		&-overlay
+			position: fixed
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background: rgba(39, 43, 49, 0.7)
+			display: none
+			z-index: 10
+
+		&__wrap
+			padding-bottom: 35px
+			max-height: 100vh
+			overflow-y: scroll
+			
+		&__close
+			position: absolute
+			top: 9px
+			left: 11px
+			width: 30px
+			height: 30px
+			display: flex
+			align-items: center
+			justify-content: center
+			
+			&:before
+				content: ""
+				@include mixin-i
+				@include mixin-i-close
+				
+		&__back
+			height: 25px
+			display: inline-flex
+			align-items: center
+			font-size: 10px
+			font-weight: 500
+			text-transform: uppercase
+			color: #B8B8B8
+			opacity: 0
+			visibility: hidden
+			transition: opacity 0.3s, visibility 0s linear 0.3s
+			
+			.b
+				display: flex
+				align-items: center
+				
+				.t
+					margin-left: 7px
+				
+		&__top
+			height: 49px
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			padding: 12px 15px
+			
+			position: relative
+			border-bottom: 1px solid #f0f0f0
+			
+		&__list
+			overflow: hidden
+			max-width: 100%
+			position: relative
+			
+			&-wrap
+				width: 200%
+				position: relative
+				left: 0
+				
+			.item
+				width: $mobile-menu-width
+				border-bottom: 1px solid #f0f0f0
+				
+				& > a, &__btn
+					display: block
+					padding: 12px 29px
+					font-size: 12px
+					font-weight: 500
+					text-transform: uppercase
+					color: $c-default
+					text-decoration: none
+					
+					&:hover
+						background: #8bae5b
+						color: #fff
+					
+			.item-slide
+			
+				&.active
+					.item__hidden
+						visibility: visible
+			
+				
+			.item__btn
+				width: 100%
+				min-width: 100%
+				position: relative
+					
+			.item__hidden
+				width: $mobile-menu-width
+				min-width: $mobile-menu-width
+				position: absolute
+				top: 0
+				left: $mobile-menu-width
+				visibility: hidden
+				
+			.item__category
+				display: block
+				padding: 12px 29px
+				font-size: 15px
+				font-weight: bold
+				background: #FBFBFB
+				border-bottom: 1px solid #f0f0f0
+				position: relative
+				
+			.item-slide .item__btn, .item__category
+				
+				&:before
+					content: ""
+					position: absolute
+					top: calc(50% - 7px)
+					right: 15px
+					@include mixin-i
+					@include mixin-i-pointer3
+					transform: rotate(90deg)
+				
+				
+				
+		&__bottom
+			padding: 23px $wrapper-padding-mobile 0
+			
+			.btn
+				width: 100%		

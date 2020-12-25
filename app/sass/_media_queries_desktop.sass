@@ -1,0 +1,315 @@
+
+
+/* media queries desktop */
+@media (min-width: $screen-md-min) 
+
+	.hidden-md 
+	   display: none !important
+  
+	.visible-md 
+		display: block !important
+		
+	
+	.mobile-menu, .mobile-menu__btn, .mobile-menu-overlay
+		display: none !important
+		
+	.main-menu
+		&__dropdown
+			position: relative
+			z-index: 2
+			
+			.dropdown-btn
+				position: relative
+				
+				&:before
+					content: ""
+					position: absolute
+					top: -5px
+					right: -5px
+					bottom: -5px
+					left: -5px
+					background: #80AD53
+					border-radius: 5px 5px 0 0
+					opacity: 0
+					transition: opacity 0.25s ease
+					box-shadow: 0 -2px 12px rgba(0,0,0,0.15)
+			
+		
+			.dropdown-wrap
+				position: absolute
+				top: 51px
+				left: -5px
+				max-width: calc(100vw - 203px)
+				width: 1040px
+				background: #fff
+				padding: 21px 16px 20px
+				visibility: hidden
+				box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.2)
+				border-radius: 0 5px 5px 5px
+				opacity: 0
+				transition: opacity 0.3s, visibility 0s linear 0.3s
+		
+			&:hover
+				.dropdown-btn
+					&:before
+						opacity: 1
+						
+					.text
+						color: #fff
+			
+						&:before
+							filter: invert(100%) brightness(1.3)
+						
+				.dropdown-wrap
+					opacity: 1
+					visibility: visible
+					transition-delay: 0s
+					
+					
+	.menu-catalog
+		display: flex
+		flex-wrap: wrap
+		
+		&__item
+			flex: 33%
+			max-width: 33%
+			height: 122px
+			margin: 8px 0
+
+			a
+				height: 100%
+				display: flex
+				align-items: center
+				margin: 0 10px
+				padding: 10px 10px 10px 20px
+				border: 1px solid #e6e6e6
+				border-radius: 6px
+				text-decoration: none
+				
+				&:hover
+					.item__link
+						.t
+							text-decoration: none
+				
+				.item__img
+					width: 80px
+					flex: 0 1 auto
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-right: 20px
+					
+					img
+						max-width: 100%
+						max-height: 100%
+						display: inline-block
+						vertical-align: middle
+						
+				.item__wrap
+					flex: 1 1 0
+					
+				.item__title
+					display: block
+					margin-bottom: 6px
+					font-size: 17px
+					line-height: 1.3
+					color: $c-default
+					
+				.item__link
+					font-size: 15px
+					font-weight: 500
+					color: #71AB36
+					text-decoration: none
+					
+					
+					.t
+						text-decoration: underline
+						
+					.i
+						margin-left: 8px
+						
+					&:hover
+						text-decoration: none
+			
+			
+		
+	.sect-prod
+	
+		.inner-wrapper
+			display: flex
+	
+		&__text
+			width: 310px
+			min-width: 310px
+			flex: 0 1 auto
+			padding-right: 10px
+		
+		&__carousel
+			flex: 1 1 0
+			overflow: hidden
+			
+			.item
+				&__wrap
+					
+					&:before
+						content: ""
+						position: absolute
+						top: 0
+						right: 0
+						left: 0
+						height: 276px
+						box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+						border-radius: 7px
+						transition: all 0.2s ease
+						border: 3px solid #fff
+						background: #fff
+						
+					&:hover
+						&:before
+							top: -20px
+							height: 342px
+							box-shadow: 0px 9px 20px rgba(97, 138, 26, 0.26)
+							border-color: #3EAD4F
+							
+						.item__img:before
+							opacity: 1
+							
+							
+					& > *
+						position: relative
+						
+				&__img
+					position: relative
+					
+					&:before
+						content: ""
+						position: absolute
+						top: calc(50% - 59px)
+						left: calc(50% - 88px)
+						width: 196px
+						height: 124px
+						background: url(../img/img_slider_hover.jpg) 0 0 no-repeat
+						background-size: cover
+						transition: opacity .5s ease
+						opacity: 0
+						
+				
+					
+		
+	.sect-why
+		&__list
+		
+			.item-col
+				&:nth-child(1)
+					width: 27%
+					min-width: 27%
+					
+				&:nth-child(2)
+					width: 25%
+					min-width: 25%
+					
+				&:nth-child(3)
+					width: 27%
+					min-width: 27%
+					
+				&:nth-child(4)
+					width: 21%
+					min-width: 21%
+					
+				& + .item-col
+					.item
+						margin-left: 10px
+						
+			
+		
+				
+
+	.sect-feedback
+		
+		&__wrapper
+			display: grid
+			grid-template-areas: "text slider" "control slider"
+			grid-template-columns: 303px calc(100% - 303px)
+			grid-template-rows: max-content
+			padding: 31px 0 48px
+			
+		&__text
+			grid-area: text
+		
+		&__control
+			grid-area: control
+		
+		&__slider
+			grid-area: slider
+			
+	
+	.page-404
+	
+		&__l
+			width: 45%
+			flex: 0 1 auto
+			padding-right: 2%
+		
+		&__r
+			flex: 1 1 0
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			margin-top: 26px
+			
+	
+			
+	
+	
+
+
+/* end media queries desktop */
+
+
+
+
+
+/* media queries desktop 1100 - 1200 */
+@media (min-width: $screen-md-min) and (max-width: 1200px)
+	.main-photo-list .item:nth-child(3)
+		display: none
+
+
+
+
+/* media queries desktop 1100 - 1259 */
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) 
+	
+	.main-menu
+		margin: 0 28px 0 16px
+		
+	.sect-top
+		background-position: 62% 0
+		
+	.h-contacts
+		&__phone
+			&:before
+				display: none
+				
+			.t
+				a
+					font-size: 18px
+					
+
+
+
+
+/* media queries desktop 1280+ */
+@media (min-width: $screen-lg-min) 
+	
+	.sect-cat 
+		
+	
+	
+	
+	
+	
+	
+
+
+/* end media queries 1280+ */
