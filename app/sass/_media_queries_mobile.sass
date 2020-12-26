@@ -658,7 +658,7 @@
 	
 	.main__sidebar
 		max-width: 320px
-		margin-top: 45px
+		margin: 45px auto 0
 		
 		
 		
@@ -667,11 +667,114 @@
 		&__list
 			display: flex
 			flex-wrap: wrap
+			
+			
+	
+	
+	
+	.news-list
+	
+	
+		.item, .item-big
+			margin: 20px 0
+			
+			
+		.item-big
+			height: 53vw
+			
+			&__wrap
+				height: 100%
+				overflow: hidden
 				
+			
+			.wrap
+				position: absolute
+				bottom: 28px
+				right: 70px
+				left: 30px
+				z-index: 1
+				
+				&__title
+					font-size: 19px
+					
+				&__desc
+					margin-top: 16px
+					
+					
+				
+				
+	.tabs__control
+		justify-content: center
+		
+		.item
+			max-width: 50%
+	
+	.catalog-info
+		flex-direction: column
+		align-items: flex-start
+		margin-top: 20px
+		
+		&__btn
+			margin: 25px 0 0 0
+			
+	.catalog__category
+		margin-top: 57px
+		
+		.top-title
+			font-size: 22px
+			text-align: center
+			
+	.catalog__list
+		.item
+			max-width: 360px
+			margin-left: auto
+			margin-right: auto
 				
 
+	
+	.reasons
+		margin-left: 0
+		margin-right: 0
 		
+		&__item
+			
+			&-wrap
+				padding: 21px 23px 23px 72px
+				
+			.num
+				top: 17px
+				left: 18px
+				font-size: 35px
+				
+				
+				
+	
+	.feedback-bottom
+		&__form
+			max-width: 320px
+			margin-left: auto
+			margin-right: auto
+			
+			.form__row
+			
+			.field
+				margin-top: 31px
+				
+				
+				
+	.contacts
 		
+		.wrap
+			max-width: 380px
+			
+			&__contact
+				max-width: 320px
+			
+		.map
+			margin-top: 45px
+				
+					
+				
 	#footer
 		padding-top: 15px
 		border-top: 1px solid #eee
@@ -931,6 +1034,35 @@
 	.privacy-policy
 		margin-top: 22px
 		
+	.feedback-bottom
+		&__form
+			max-width: 470px
+			
+			.form__row
+				display: flex
+				margin-left: -10px
+				margin-right: -10px
+				
+				.field
+					min-width: 50%
+					width: 50%
+					padding: 0 10px
+					margin: 0
+					
+					&.--full
+						width: 100%
+						min-width: 100%
+						
+	
+					
+	.contacts
+		
+			
+		&__item
+		
+			.map
+				height: 400px
+		
 	#footer
 		
 		.f-left
@@ -1085,6 +1217,64 @@
 					
 				.t + .i
 					margin-left: 7px
+					
+	.feedback-bottom
+		.sect-title
+			.title
+				font-size: 24px
+				
+		&__form
+			.notice
+				padding-left: 33px
+				
+				&:before
+					left: 0
+					
+					
+	.news-list
+	
+		.item
+			&__title
+				font-size: 16px
+			
+		.item-big
+			min-height: 240px
+			
+			.wrap
+				bottom: 20px
+				right: 40px
+				left: 20px
+				
+				&__title
+					font-size: 18px
+					
+				&__desc
+					margin-top: 10px
+					
+					
+	.contacts
+		
+			
+		&__item
+		
+			& + .contacts__item
+				margin-top: 65px
+				
+			.text
+				font-size: 14px
+				
+			.company
+				font-size: 16px
+			
+			address
+				font-size: 21px
+				
+			.map
+				margin-top: 35px
+				border: 1px solid #EAEAEA
+				height: 350px
+			
+			.wrap
 					
 	.f-nav
 		&__wrap

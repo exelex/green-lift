@@ -22,11 +22,11 @@ input[type=button]::-moz-focus-inner, input[type=submit]::-moz-focus-inner, butt
 	border: 0
 
 ::-webkit-input-placeholder 
-	color:#c7cbcd
+	color:#969696
 	opacity: 1
 
 ::-moz-placeholder 
-	color:#c7cbcd
+	color:#969696
 	opacity: 1
 
 
@@ -81,6 +81,9 @@ input[type=number]::-webkit-inner-spin-button
 	&.size-big
 		height: 60px
 		
+	&.size-l
+		height: 50px
+		
 	&.size-xl
 		height: 55px
 		padding-left: 30px
@@ -99,8 +102,6 @@ input[type=number]::-webkit-inner-spin-button
 			background: linear-gradient(90.79deg, #FAD652 3.75%, #FBB707 104.48%)
 			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.12)
 			
-			
-		
 	
 		
 	&.btn--green
@@ -118,6 +119,7 @@ input[type=number]::-webkit-inner-spin-button
 			background: #8BBF43
 			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.12)
 			color: #fff
+		
 		
 	&.btn--green2
 		background: linear-gradient(270deg, #97C046 0%, #80AD53 100%)
@@ -141,6 +143,16 @@ input[type=number]::-webkit-inner-spin-button
 			
 				.icon
 					margin-right: 24px
+					
+		.icon-download
+			width: 38px
+			height: 38px
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			background: #FAD652
+			border-radius: 50%
+					
 	
 	&.btn--white
 		height: 48px
@@ -165,6 +177,20 @@ input[type=number]::-webkit-inner-spin-button
 			
 			.icon
 				margin-right: 13px
+				
+				
+				
+	&.btn--download
+		
+		&.size-big
+			padding-left: 26px
+			padding-right: 12px
+			
+			.i + .t
+				margin-left: 19px
+			
+			.icon-download
+				margin-left: 21px
 			
 	
 		
@@ -174,11 +200,19 @@ input[type=number]::-webkit-inner-spin-button
 
 
 .inp 
+	height: 50px
 	display: inline-block
 	vertical-align: middle
+	padding: 3px 20px 2px
 	box-sizing: border-box
 	transition: all 0.2s ease
-
+	font-size: 13px
+	color: #202020
+	border: 1px solid #E7E7E7
+	border-radius: 2px
+	
+	&:focus
+		border-color: #cecece
 
 	&.size--s 
 		height: 44px
@@ -188,11 +222,48 @@ input[type=number]::-webkit-inner-spin-button
 	
 
 	&.error 
-		border: 2px solid #f93f3f
-	
+		border-color: $error !important
+		color: #E32855
 	
 	
 	&.inp--white 
+		border-color: #fff
 		
+textarea
+	min-width: 100%	
+		
+textarea.inp
+	padding-top: 14px
+	padding-bottom: 14px
 	
+	
+.form
+	.field
+		position: relative
+		
+		.inp
+			width: 100%
+	
+		label.error
+			position: absolute
+			top: calc(100% - 5px)
+			left: 50%
+			transform: translateX(-50%)
+			font-size: 11px
+			color: #fff
+			padding: 2px 12px
+			background: $error
+			z-index: 1
+			white-space: nowrap
+			border-radius: 3px
+			
+		&__note
+			position: absolute
+			top: -11px
+			left: 21px
+			height: 15px
+			padding: 0 6px
+			font-size: 13px
+			color: #7A7A7A
+			background: #fff
 	

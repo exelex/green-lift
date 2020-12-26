@@ -30,6 +30,8 @@ app.bindActions = function() {
 
 app.initElems = function() {
 	this.initSlick();
+	this.initTabs();
+	this.initValidate();
 	return this;
 };
 
@@ -129,6 +131,42 @@ let mobileMenuControl = {
 	}
 }
 
+
+
+
+app.initTabs = function() {
+	if($('.tabs').length) {
+		function Tabs() {
+		  var bindAll = function() {
+		    var menuElements = document.querySelectorAll('[data-tab]');
+		    for(var i = 0; i < menuElements.length ; i++) {
+		      menuElements[i].addEventListener('click', change, false);
+		    }
+		  }
+
+		  var clear = function() {
+		    var menuElements = document.querySelectorAll('[data-tab]');
+		    for(var i = 0; i < menuElements.length ; i++) {
+		      menuElements[i].classList.remove('active');
+		      var id = menuElements[i].getAttribute('data-tab');
+		      document.getElementById(id).classList.remove('active');
+		    }
+		  }
+
+		  var change = function(e) {
+		  	e.preventDefault();
+		    clear();
+		    e.target.classList.add('active');
+		    var id = e.currentTarget.getAttribute('data-tab');
+		    document.getElementById(id).classList.add('active');
+		  }
+
+		  bindAll();
+		}
+		
+		var connectTabs = new Tabs();
+	}
+}
 
 
 //раскрывающиеся блоки
@@ -376,6 +414,137 @@ app.initSlick = function() {
 	}
 	
 }
+
+
+
+
+
+app.initValidate = function() {
+	
+    if($('#form-partnership').length) {
+    	
+	  	$('input[name="phone"]').mask("7(999)99-99-999");
+
+        $("#form-partnership").validate({
+            rules:{
+                company:{
+                    required: true,
+                    minlength: 1,
+                    maxlength: 30
+                },
+                
+                name:{
+                    required: true,
+                    minlength: 1,
+                    maxlength: 30
+                },
+
+                phone: {
+                    required: true,
+                    minlength: 4,
+                    maxlength: 17,
+                    digits: false
+                },
+                
+                mail: {
+                    required: true,
+                    email: true
+                },
+                
+                message:{
+                    required: true,
+                    minlength: 1,
+                },
+            },
+            
+            
+            messages:{
+
+                company:{
+                    required: "Это поле обязательно для заполнения",
+                    maxlength: "Максимальное число символов - 30"
+                },
+
+                name: {
+                    required: "Это поле обязательно для заполнения",
+                    maxlength: "Максимальное число символов - 30"
+                },
+
+
+                phone: {
+                    digits: "Неверный формат телефона",
+                    required: "Это поле обязательно для заполнения",
+                    minlength: "Телефон должен состоять минимум из 4-х цифр"
+                },
+                
+                mail:{
+                    required: "Это поле обязательно для заполнения",
+                    email: "Неверный формат email"
+                },
+                
+                message:{
+                    required: "Это поле обязательно для заполнения"
+                }
+                
+
+            },
+            
+            submitHandler: function() {
+			}
+        });
+    }
+    
+    
+    
+    if($('#form-feedback').length) {
+    	
+	  	$('input[name="phone"]').mask("7(999)99-99-999");
+
+        $("#form-feedback").validate({
+            rules:{
+                name:{
+                    required: true,
+                    minlength: 1,
+                    maxlength: 30
+                },
+
+                mail: {
+                    required: true,
+                    email: true
+                },
+                
+                message:{
+                    required: true,
+                    minlength: 1,
+                },
+            },
+            
+            
+            messages:{
+
+                name: {
+                    required: "Это поле обязательно для заполнения",
+                    maxlength: "Максимальное число символов - 30"
+                },
+
+                mail:{
+                    required: "Это поле обязательно для заполнения",
+                    email: "Неверный формат email"
+                },
+                
+                message:{
+                    required: "Это поле обязательно для заполнения"
+                }
+                
+
+            },
+            
+            submitHandler: function() {
+			}
+        });
+    }
+}
+
 
 
 

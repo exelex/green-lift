@@ -270,9 +270,13 @@
 		
 		
 	.main__sidebar
-		max-width: 720px
 		margin-top: 45px
 		
+		
+	.form-partnership
+		max-width: 370px
+		margin-left: auto
+		margin-right: auto
 		
 		
 	.aside-news
@@ -291,6 +295,39 @@
 				
 				&:nth-child(2n)
 					margin-left: 2%
+					
+	
+	.news-list
+		.item, .item-big
+			min-width: 50%
+			width: 50%
+			
+		.item-big
+			.wrap
+				bottom: 28px
+				right: 50px
+				left: 20px
+				
+				&__title
+					font-size: 18px
+					
+					
+	
+	.catalog-info
+		
+		&__text
+			
+		&__btn
+			margin-left: 20px
+			
+	
+	.catalog__list
+		
+		.item
+			width: 33.33%
+			max-width: 33.33%
+			min-width: 33.33%
+			
 				
 		
 		
@@ -336,3 +373,53 @@
 
 
 /* end media queries tablet */
+
+
+
+
+/* media queries phone (768 - 950) */
+@media (min-width: $screen-sm-min) and (max-width: 950px) 
+
+	.catalog-info
+		flex-direction: column
+		align-items: flex-start
+		
+		&__btn
+			margin: 25px 0 0 0
+
+	.catalog__list
+		
+		.item
+			width: 50%
+			max-width: 50%
+			min-width: 50%
+			
+			
+			
+	.contacts
+		
+		&__item
+			flex-wrap: wrap
+			
+			.wrap
+				width: 100%
+				display: flex
+				flex: 1 1 0
+				margin-right: 0
+				padding-top: 0
+				flex-wrap: wrap
+				
+				&__top
+					width: 100%
+					min-width: 100%
+					padding-right: calc(100% - 400px)
+					
+				&__contact
+					min-width: 270px
+					margin-right: 20px
+				
+			.map
+				width: 100%
+				min-width: 100%
+				margin-top: 45px
+			
