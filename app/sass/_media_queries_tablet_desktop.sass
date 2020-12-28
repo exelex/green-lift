@@ -734,14 +734,14 @@
 				display: flex
 				
 				.field
-					min-width: 50%
-					width: 50%
-					padding: 0 10px
-					margin: 0
+					min-width: calc(50% - 20px)
+					width: calc(50% - 20px)
+					margin-left: 10px
+					margin-right: 10px
 					
 					&.--full
-						width: 100%
-						min-width: 100%
+						width: calc(100% - 20px)
+						min-width: calc(100% - 20px)
 						
 						
 						
@@ -786,6 +786,75 @@
 			
 			&__wrap
 				margin: 0 10px
+				
+				
+	
+	.about-info 
+		
+		.text
+			padding: 24px 33px 24px
+			background: #fff
+			border-radius: 3px 3px 0 0
+		
+		.stat
+			display: flex
+			justify-content: space-between
+			
+			&__col
+			
+				.num	
+					flex: 0 1 auto
+					
+				.t
+					flex: 1 1 0
+					
+					
+	.about-promo
+		height: 467px
+		position: relative
+		
+		&__control
+			position: absolute
+			top: 20px
+			right: 0
+		
+		&__slider
+			position: absolute
+			top: 0
+			left: 0
+		
+		&__text
+			position: absolute
+			top: 113px
+			right: 0
+			
+			
+	.about-advantages 
+		margin-top: 48px
+		
+		.list
+			display: flex
+			justify-content: space-between
+		
+			&__item
+				max-width: 190px
+				width: 190px
+				padding-right: 15px
+				
+				&:last-child
+					padding-right: 0
+					
+					
+	.about-qualities
+		display: flex
+		flex-wrap: wrap
+		margin-left: -10px
+		margin-right: -10px
+		
+		.item
+			width: calc(33.3% - 20px)
+			margin-left: 10px
+			margin-right: 10px
 		
 
 

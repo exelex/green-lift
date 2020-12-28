@@ -354,6 +354,76 @@ app.initSlick = function() {
 		})
 	}
 	
+	if($('#slider-promo-text').length) {
+		
+		$('#slider-promo-img').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: false,
+			fade: true,
+			speed: 400,
+			infinite: true,
+			adaptiveHeight: true,
+			asNavFor: '#slider-promo-text'
+		});
+		
+		
+		$('#slider-promo-text').slick({
+			slidesToScroll: 1,
+			slidesToScroll: 1,
+			dots: true,
+			arrows: false,
+			fade: true,
+			speed: 400,
+			infinite: true,
+			adaptiveHeight: true,
+			asNavFor: '#slider-promo-img',
+		});
+		
+		let paging = document.querySelector('.about-promo__paging');
+		let dots = document.querySelector('#slider-promo-text .slick-dots');
+		
+		function updatePaging() {
+			let numActive = 1;
+			
+			for(var i = 0; i < dots.childElementCount; i++) {
+				let el = dots.children;
+				
+				if(el[i].classList.contains("slick-active")) {
+					numActive = i + 1;
+				}
+			}
+			
+			paging.innerHTML = `
+				<span class="a">${twoDigits(numActive)}</span>
+				<span class="sep">/</span>
+				<span class="n">${twoDigits(dots.childElementCount)}</span>
+				`;
+		}
+		
+		function twoDigits(num) {
+		  return ('0' + num).slice(-2);
+		}
+		
+		updatePaging();
+		
+		$('#slider-promo-text').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			setTimeout(function() {
+				updatePaging();
+			}, 30)
+		});
+		
+		
+		document.querySelector('.about-promo__prev').addEventListener('click', function() {
+			$('#slider-promo-text').slick('slickPrev');
+		})
+		
+		document.querySelector('.about-promo__next').addEventListener('click', function() {
+			$('#slider-promo-text').slick('slickNext');
+		})
+	}
+	
 	
 	if($('#carousel-prod').length) {
 		$('#carousel-prod').slick({
@@ -410,6 +480,51 @@ app.initSlick = function() {
 		
 		document.querySelector('.slider-feedback__next').addEventListener('click', function() {
 			$('#slider-feedback').slick('slickNext');
+		})
+	}
+	
+	
+	
+	if($('#slider-news-mini').length) {
+		$('#slider-news-mini').slick({
+			arrows: false,
+			speed: 500,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: true,
+			adaptiveHeight: true,
+			dots: false,
+			responsive: [
+				{
+				  breakpoint: 2900,
+				  settings: {
+					slidesToShow: 1,
+				  }
+				},
+				
+				{
+				  breakpoint: 1100,
+				  settings: {
+					slidesToShow: 2
+				  }
+				},
+				
+				{
+				  breakpoint: 768,
+				  settings: {
+					slidesToShow: 1
+				  }
+				},
+			  ]
+		})
+		
+		
+		document.querySelector('.slider-news__prev').addEventListener('click', function() {
+			$('#slider-news-mini').slick('slickPrev');
+		})
+		
+		document.querySelector('.slider-news__next').addEventListener('click', function() {
+			$('#slider-news-mini').slick('slickNext');
 		})
 	}
 	
@@ -537,6 +652,63 @@ app.initValidate = function() {
                 }
                 
 
+            },
+            
+            submitHandler: function() {
+			}
+        });
+    }
+    
+    
+    if($('#form-subscribe').length) {
+    	
+        $("#form-subscribe").validate({
+            rules:{
+                mail: {
+                    required: true,
+                    email: true
+                },
+            },
+            
+            
+            messages:{
+                mail:{
+                    required: "Это поле обязательно для заполнения",
+                    email: "Неверный формат email"
+                },
+            },
+            
+            submitHandler: function() {
+			}
+        });
+    }
+    
+    
+    
+    if($('#form-consultation').length) {
+    	
+	  	$('input[name="phone"]').mask("7(999)99-99-999");
+
+        $("#form-consultation").validate({
+            rules:{
+
+                phone: {
+                    required: true,
+                    minlength: 4,
+                    maxlength: 17,
+                    digits: false
+                },
+            },
+            
+            
+            messages:{
+
+                phone: {
+                    digits: "Неверный формат телефона",
+                    required: "Это поле обязательно для заполнения",
+                    minlength: "Телефон должен состоять минимум из 4-х цифр"
+                },
+                
             },
             
             submitHandler: function() {

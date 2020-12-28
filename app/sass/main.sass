@@ -453,6 +453,22 @@
 		font-size: 16px
 		font-weight: bold
 		text-transform: uppercase
+		
+	.top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		
+		.title
+			margin-bottom: 0
+			
+		.arrows
+			* + *
+				margin-left: 5px
+				
+	&.--slider
+		.aside-news__list
+			margin-top: 13px
 	
 	.item
 		
@@ -1013,6 +1029,125 @@
 					margin-top: 2px
 					font-size: 18px
 					
+					
+					
+					
+					
+					
+/* ****** subscribe ****** */
+.subscribe 
+	margin: 35px 0 20px
+	max-width: 300px
+	
+	&__wrap
+		padding: 17px 27px 28px
+		background: #fff	
+		box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05)
+		border-radius: 7px
+		
+	.title
+		margin-top: 15px
+		font-family: $font-title, sans-serif
+		font-size: 21px
+		font-weight: bold
+		line-height: 1.3
+		
+	.form
+		margin-top: 25px
+		
+		.bottom
+			margin-top: 22px
+			
+			.btn
+				width: 100%
+				
+	.note
+		margin-top: 14px
+		font-size: 13px
+		color: #64656F
+		text-align: center
+					
+					
+					
+					
+					
+/* ****** consultation ****** */
+.consultation 
+	margin: 25px 0 15px
+	
+	&__wrap
+		padding: 24px 27px 23px
+		background: linear-gradient(270deg, #97C046 0%, #80AD53 100%)
+		border-radius: 7px
+		position: relative
+		color: #fff
+		
+		& > *
+			position: relative
+			z-index: 1
+			
+		.title, .text
+			font-family: $font-title, sans-serif
+			
+		.title
+			font-weight: bold
+			font-size: 21px
+			line-height: 1.15
+			
+		.text
+			margin-top: 5px
+			font-size: 15px
+			line-height: 1.4
+			
+		.form
+			margin-top: 20px
+			
+			.bottom
+				margin-top: 19px
+				
+				.btn
+					width: 100%
+					padding-left: 10px
+					padding-right: 10px
+					
+		
+		.note
+			padding-left: 29px
+			margin-top: 20px
+			position: relative
+			font-size: 12px
+			color: #fff
+			line-height: 1.3
+			
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				@include mixin-i
+				@include mixin-i-lock
+				
+			a
+				color: #fff
+			
+		
+		.img-bg
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 333px	
+			height: 231px	
+			object-fit: cover			
+			z-index: 0
+
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		
+		
+
+					
 
 
 
@@ -1038,7 +1173,6 @@
 			
 		textarea
 			min-height: 118px
-
 
 		.notice
 			padding-left: 43px
@@ -1088,7 +1222,209 @@
 			font-size: 28px
 				
 
+
+
+/* ****** about-info ****** */
+.about-info 
+	
+	.text
+		padding: 24px 33px 24px
+		background: #fff
+		border-radius: 3px 3px 0 0
 		
+	.stat
+		background: #EFF3F7
+		border-radius: 0 0 3px 3px
+		
+		&__col
+			display: flex
+			align-items: center
+			padding: 13px 0 12px 33px
+		
+		.num
+			margin-right: 12px
+			font-size: 45px
+			font-weight: 900
+			color: #3EAD4F
+			
+		.t
+			font-size: 14px
+			color: #737373
+			
+			
+			
+/* ****** about-promo ****** */
+.about-promo 
+	margin-top: 46px
+
+	&__control
+		display: flex
+		align-items: center
+		
+		.num
+			width: 58px
+			height: 48px
+			position: relative
+			margin-right: 15px
+			font-family: $font-title, sans-serif
+			font-weight: 300
+			font-size: 26px
+			color: #000
+			
+			& > *
+				position: absolute
+			
+			.a
+				top: 0
+				left: 0
+				width: 24px
+				
+			.sep
+				top: 15px
+				left: 31px
+				font-size: 18px
+			
+			.n
+				left: 40px
+				top: 21px
+				font-size: 16px
+				color: #A9A9A9
+				
+		.arrows
+			*
+				margin-left: 6px
+		
+	&__slider
+		width: 595px
+		height: 429px
+		overflow: hidden
+		
+		.item
+			&__wrap
+				height: 429px
+				
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+					
+				
+		
+	&__text
+		width: 409px
+		min-height: 353px
+		padding: 31px 33px
+		background: linear-gradient(270deg, #97C046 0%, #80AD53 100%), #92BC49
+		color: #fff
+		position: relative
+		
+		& > *
+			position: relative
+			z-index: 1
+		
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background: url(../img/bg_lines.png) center no-repeat
+			background-size: cover
+		
+		.item
+			&__wrap
+				
+		.slick-dots
+			display: none !important
+			
+		.title
+			font-family: $font-title, sans-serif
+			font-size: 22px
+			font-weight: bold
+			line-height: 1.3
+			
+		.text
+			margin-top: 20px
+			font-size: 15px
+			line-height: 1.75
+			
+			p
+				line-height: 1.75
+			
+		
+			
+		
+/* ****** about-advantages ****** */
+.about-advantages 
+	margin: 35px 0 25px
+	
+	.title
+		font-size: 27px
+	
+	.list
+		margin-top: 36px
+	
+		&__item
+			position: relative
+			font-size: 16px
+			font-weight: 500
+			line-height: 1.3
+			
+			.icon
+				margin-bottom: 29px
+				display: block
+				
+				&:before
+					content: ""
+					position: absolute
+					top: 10px
+					left: 11px
+					width: 38px
+					height: 38px
+					background: #FAD652
+					border-radius: 50%
+				
+				span
+					position: relative
+					
+					
+					
+					
+
+/* ****** about-qualities ****** */
+.about-qualities 
+	margin: 36px 0 25px
+	
+	.item
+		padding: 20px 25px 20px 30px
+		margin: 10px 0
+		background: #fff
+		border-radius: 7px
+		box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.06)
+		
+		&__icon
+			height: 55px
+		
+		&.--big
+			.item__icon
+				span
+					transform: scale(0.52)
+					transform-origin: top left
+					
+		&__title
+			margin-top: 17px
+			font-family: $font-title, sans-serif
+			font-size: 17px
+			
+		&__text
+			margin-top: 8px
+			font-size: 14px
+			font-weight: 300
+			color: #5D5D65
+			line-height: 1.6
+		
+
 
 					
 
@@ -1126,8 +1462,9 @@
 		
 		
 		
+		
 
-.carousel-news:not(.slick-slider), .slider-feedback:not(.slick-slider), .carousel-prod:not(.slick-slider), .slider-main:not(.slick-slider), .carousel-main:not(.slick-slider)
+.carousel-news:not(.slick-slider), .slider-feedback:not(.slick-slider), .carousel-prod:not(.slick-slider), .slider-main:not(.slick-slider), .carousel-main:not(.slick-slider), #slider-promo-img:not(.slick-slider), #slider-promo-text:not(.slick-slider)
 	display: flex
 
 		

@@ -668,6 +668,27 @@
 			display: flex
 			flex-wrap: wrap
 			
+		#slider-news-mini
+			width: 100%
+	
+		&.--slider
+			max-width: 300px
+			margin-left: auto
+			margin-right: auto
+			
+			.slide
+				display: flex
+			
+			.aside-news__list
+				margin-left: -10px
+				margin-right: -10px
+				
+				.item
+					
+					&__wrap
+						margin-left: 10px
+						margin-right: 10px
+			
 			
 	
 	
@@ -756,7 +777,7 @@
 			margin-right: auto
 			
 			.form__row
-			
+				margin-top: 0
 			.field
 				margin-top: 31px
 				
@@ -773,7 +794,67 @@
 		.map
 			margin-top: 45px
 				
-					
+	.consultation
+		max-width: 300px
+	
+	.subscribe, .consultation
+		margin-left: auto
+		margin-right: auto
+			
+		.icon, .title
+			text-align: center
+			
+	
+	.about-info
+		
+		.stat
+			padding: 13px 25px 12px 33px
+			
+			&__col
+				padding: 0 10px 0 0
+				justify-content: center
+				
+				& + *
+					margin-top: 15px
+		
+			.num
+				font-size: 35px
+			.t
+				font-size: 13px
+				
+	.about-promo
+	
+		&__slider
+			width: 100%
+			height: 65vw
+			margin-top: 25px
+			
+			.item__wrap
+				height: 85vw
+			
+		&__text
+			width: 100%
+			height: auto
+			min-height: auto
+			
+			
+	
+	.about-advantages
+	
+		.list
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+		
+			&__item
+				min-width: 210px
+				width: 50%
+				padding-right: 10px
+				margin-bottom: 25px
+				font-size: 15px
+				
+				&:last-child
+					padding-right: 0
 				
 	#footer
 		padding-top: 15px
@@ -1044,14 +1125,14 @@
 				margin-right: -10px
 				
 				.field
-					min-width: 50%
-					width: 50%
-					padding: 0 10px
-					margin: 0
+					min-width: calc(50% - 20px)
+					width: calc(50% - 20px)
+					margin-left: 10px
+					margin-right: 10px
 					
 					&.--full
-						width: 100%
-						min-width: 100%
+						width: calc(100% - 20px)
+						min-width: calc(100% - 20px)
 						
 	
 					
@@ -1275,6 +1356,55 @@
 				height: 350px
 			
 			.wrap
+			
+	
+	.about-info
+		
+		.text
+			padding-left: 22px
+			padding-right: 22px
+		
+		.stat
+			padding-left: 22px
+			
+			&__col
+				flex-wrap: wrap
+				justify-content: flex-start
+				
+				.num
+					min-width: 100%
+					width: 100%
+					
+	
+	.about-promo
+	
+		&__slider
+			height: 65vw
+			
+			.item__wrap
+				height: 65vw
+			
+		&__text
+			padding: 20px
+			
+			
+	
+	.about-advantages
+		display: none
+		
+	
+		
+	
+	
+	.about-qualities
+		max-width: 360px
+		margin-left: auto
+		margin-right: auto
+		margin-top: 45px
+		
+		.item
+			margin: 20px 0
+			
 					
 	.f-nav
 		&__wrap
