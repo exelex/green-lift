@@ -26,6 +26,9 @@
 			justify-content: space-between
 			position: relative
 			
+		&:before
+			display: none
+			
 	.h-logo
 		margin-left: 40px
 		
@@ -103,6 +106,8 @@
 	.main-menu
 		display: none
 				
+	.sect-top
+		background: #fff
 				
 	.sect-main
 		padding: 5px 0 34px
@@ -306,7 +311,7 @@
 			
 				
 	.sect-why
-		margin-top: 55px
+		padding-top: 55px
 		
 		&__list
 			max-width: 360px
@@ -327,7 +332,7 @@
 					
 					
 	.sect-news
-		margin: 64px 0 35px
+		padding: 64px 0 35px
 		
 		.inner-wrapper
 			padding-left: 0
@@ -377,7 +382,7 @@
 	
 	.sect-feedback
 		padding: 19px 0 33px
-		margin-top: 42px
+		margin-top: 6px
 		
 		&__wrapper
 			display: flex
@@ -405,11 +410,11 @@
 			margin-right: -($wrapper-padding-mobile)
 			
 			.item
-				display: flex
-				justify-content: center
+				padding-left: $wrapper-padding-mobile
+				padding-right: $wrapper-padding-mobile
 			
 				&__wrap
-					margin: 58px $wrapper-padding-mobile 20px
+					margin: 58px auto 20px
 					max-width: 400px
 					padding: 37px 24px 21px
 					background: #fff
@@ -481,6 +486,7 @@
 	.sect-contacts
 		position: relative
 		overflow: hidden
+		background: #fff
 		
 		.inner-wrapper
 			padding-left: 0
@@ -741,15 +747,30 @@
 	.catalog__category
 		margin-top: 57px
 		
+		&-wrap
+			margin-left: -($wrapper-padding-mobile)
+			margin-right: -($wrapper-padding-mobile)
+			
+			.catalog__list
+				.item
+					max-width: unset
+					margin-left: 0
+					margin-right: 0
+					
+					&__wrap
+						margin-left: $wrapper-padding-mobile
+						margin-right: $wrapper-padding-mobile
+		
 		.top-title
 			font-size: 22px
 			text-align: center
 			
+			
 	.catalog__list
 		.item
 			max-width: 360px
-			margin-left: auto
-			margin-right: auto
+			margin-left: 15px
+			margin-right: 15px
 				
 
 	
@@ -869,6 +890,184 @@
 		
 		.item
 			margin: 20px 0
+			
+	.card-note
+		padding: 25px 20px 25px 20px
+		
+	
+	.card-advantages
+		max-width: 450px
+		margin-left: auto
+		margin-right: auto
+		+mtb
+		
+		.item
+			margin: 22px 0
+			
+			&__wrap
+				align-items: center
+				
+	.card-info
+		margin-left: -($wrapper-padding-mobile)
+		margin-right: -($wrapper-padding-mobile)
+		border-radius: 0
+		
+		
+		&__l
+			padding: 30px $wrapper-padding-mobile
+			
+			.img
+				min-height: 315px
+				display: flex
+				align-items: center
+				position: relative
+				padding-left: 15px
+				padding-right: 15px
+				
+				.img-front
+					max-width: 75%
+					position: relative
+					z-index: 1
+				
+				.img-back
+					position: absolute
+					top: -2%
+					left: 22%
+					filter: blur(5px)
+					transform: scale(0.45)
+			
+			.bottom
+				margin-top: 28px
+				
+				.btn
+					width: 100%
+		
+		&__text
+			padding: 20px $wrapper-padding-mobile
+			
+			.text
+				margin-top: 14px
+				line-height: 1.75
+				font-size: 14px
+			
+			ul.list
+				margin-top: 1.4em
+				font-size: 14px
+				
+		
+		&__download
+			
+			.btn
+				margin-bottom: 15px
+				
+				&:first-child
+					margin-right: 15px
+				
+					
+					
+					
+					
+	
+	.table:not(.table--horizontal)
+		display: flex
+		flex-direction: row
+		
+		.tr
+			flex: 1
+			display: flex
+			flex-direction: column
+			justify-content: center
+			border-left: 1px solid #DEDEDE
+			
+			&
+				& > *
+					flex: 1
+					
+					&.full
+						flex: 0
+				
+			* + *
+				border-top: 1px solid #DEDEDE
+				
+	.table.table--horizontal
+		
+		.tr
+			display: flex
+			
+			& > *
+				flex: 1
+				
+			* + *
+				border-left: 1px solid #DEDEDE
+				
+			& + .tr
+				border-top: 1px solid #DEDEDE
+				
+	
+				
+				
+	.table-scroll 
+		margin: 25px 0 15px
+		overflow-x: scroll
+	
+		.table
+			width: auto
+			max-width: unset
+			margin: 0
+			
+				
+			
+	.card-other
+		margin-right: -($wrapper-padding-mobile)
+		margin-left: -($wrapper-padding-mobile)
+		
+		.table
+			min-width: 760px
+			margin-left: $wrapper-padding-mobile
+			
+			.td, .th
+				min-width: 150px
+				padding-left: 14px
+				padding-right: 14px
+				
+			.th
+				text-align: center
+	
+	
+					
+					
+				
+				
+	.bottom-request
+		background-position: 145% 12%
+	
+		.wrap
+			padding: 20px 30px
+			text-align: center
+			
+		.text
+			margin-top: 11px
+			
+		.img
+			margin-top: 15px
+			text-align: center
+		
+			img
+				width: 100%
+				max-width: 500px
+				display: inline-block
+				vertical-align: top
+				
+		&.--with-form
+			.wrap
+				width: auto
+				
+				
+	.catalog-other-s
+		max-width: 300px
+		margin-left: auto
+		margin-right: auto
+			
 				
 	#footer
 		padding-top: 15px
@@ -1091,6 +1290,10 @@
 		&__carousel
 			margin-right: -28vw
 			
+	.news-list .subscribe
+		max-width: 450px
+		margin: 45px auto
+			
 	.sect-why
 		
 		&__list
@@ -1157,7 +1360,60 @@
 		
 			.map
 				height: 400px
+				
+	
+	.card-info
 		
+		
+		&__l
+			
+			.img
+				min-height: 315px
+				
+				.img-front
+					max-width: 70%
+				
+				.img-back
+					top: -5%
+					left: calc(50% - 17%)
+					transform: scale(0.5)
+					
+					
+	.bottom-request
+	
+		&.--with-form
+			max-width: 500px
+			margin-left: auto
+			margin-right: auto
+			
+			.wrap
+				padding-top: 30px
+	
+		&__form 
+			justify-content: center
+			form
+				width: 100%
+				min-width: unset
+				max-width: 420px
+				
+				.submit
+					width: 180px
+					
+				.field
+					width: calc(100% - 155px)
+					min-width: calc(100% - 155px)
+					
+					label.error
+						top: calc(100% + 5px)
+						left: 0
+						transform: unset
+						
+	
+	.catalog__category
+		
+		&-wrap
+			margin-right: -200px
+			
 	#footer
 		
 		.f-left
@@ -1407,6 +1663,93 @@
 		display: none
 		
 	
+	.card-advantages
+		+mtb
+		
+		.item
+			.icon
+				margin-right: 3px
+				
+				span
+					transform: scale(0.85)
+			
+			.text
+				font-size: 14px
+				
+	
+				
+	.bottom-request
+		padding-left: 20
+		padding-right: 20px
+	
+		.wrap
+			padding: 20px 0px
+			text-align: center
+			
+			.bottom
+				.btn
+					min-width: 230px
+					
+		&.--with-form
+			.title
+				font-size: 23px
+				
+			.text
+				margin-top: 12px
+				font-size: 15px
+				
+			.note
+				max-width: 310px
+				min-width: 225px
+				width: 100%
+				text-align: left
+					
+		&__form 
+			align-items: center
+			flex-direction: column
+			justify-content: center
+			margin-top: 12px
+			
+			form
+				width: 220px
+				min-width: 220px
+				height: auto
+				flex-direction: column
+				background: none
+				box-shadow: none
+				margin-right: 0
+				
+				.submit
+					width: 100%
+					position: static
+					margin-top: 15px
+					
+				.field
+					width: 100%
+					min-width: 100%
+					
+					.inp
+						border-radius: 25px
+					
+					label.error
+						top: calc(100% + 5px)
+						left: 0
+					
+	
+	.card-composition
+	
+		.table
+			.tr:first-child
+				span
+					display: inline-flex
+					transform: rotate(-90deg)
+					
+					
+	
+	.catalog__category
+		
+		&-wrap
+			margin-right: -280px
 		
 	
 	.f-nav
@@ -1415,6 +1758,15 @@
 			
 			& > div
 				margin: 7px 0
+				
+				
+	.popup__wrap
+		padding: 30px 25px 30px
+		
+	.popup-icon
+		span
+			transform: scale(0.7)
+			transform-origin: top left
 
 /* end media queries phone 320 - 480 */
 

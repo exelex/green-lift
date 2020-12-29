@@ -31,6 +31,7 @@ app.bindActions = function() {
 app.initElems = function() {
 	this.initSlick();
 	this.initTabs();
+	this.initFancybox();
 	this.initValidate();
 	return this;
 };
@@ -159,6 +160,8 @@ app.initTabs = function() {
 		    e.target.classList.add('active');
 		    var id = e.currentTarget.getAttribute('data-tab');
 		    document.getElementById(id).classList.add('active');
+			$(window).resize();
+		    	
 		  }
 
 		  bindAll();
@@ -462,6 +465,34 @@ app.initSlick = function() {
 	}
 	
 	
+	
+	if($('.catalog__list').length) {
+		$('.catalog__list').slick({
+			arrows: false,
+			speed: 400,
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			infinite: true,
+			adaptiveHeight: true,
+			dots: false,
+			responsive: [
+				{
+				  breakpoint: 2900,
+				  settings: "unslick"
+				},
+				
+				{
+				  breakpoint: 768,
+				  settings: {
+					slidesToShow: 2
+				  }
+				},
+			  ]
+		})
+		
+	}
+	
+	
 	if($('#slider-feedback').length) {
 		$('#slider-feedback').slick({
 			arrows: false,
@@ -528,6 +559,35 @@ app.initSlick = function() {
 		})
 	}
 	
+}
+
+
+
+
+
+
+let fancyboxInlineParams = {
+	loop: true,
+	wheel: false,
+	animationEffect: "fade",
+	arrows: false,
+	closeExisting: true,
+	baseClass: "fancybox-container-inline",
+	buttons: [],
+	beforeShow: function() {
+		mobileMenuControl.menuClose()
+	}
+}
+
+app.initFancybox = function() {
+	
+	if($('[data-fancybox-modal]').length) {
+		$('[data-fancybox-modal]').fancybox(fancyboxInlineParams);
+		
+		$('.js-fancybox-close').on('click', function() {
+			$.fancybox.close()
+		})
+	}
 }
 
 
@@ -605,10 +665,132 @@ app.initValidate = function() {
             },
             
             submitHandler: function() {
+            	// $.fancybox.open({src: '#popup-successfull', opts: fancyboxInlineParams}); 
 			}
         });
     }
     
+	
+    if($('#form-callback').length) {
+    	
+	  	$('input[name="phone"]').mask("7(999)99-99-999");
+
+        $("#form-callback").validate({
+            rules:{
+                name:{
+                    required: true,
+                    minlength: 1,
+                    maxlength: 30
+                },
+
+                phone: {
+                    required: true,
+                    minlength: 4,
+                    maxlength: 17,
+                    digits: false
+                },
+                
+            },
+            
+            
+            messages:{
+
+                name: {
+                    required: "Это поле обязательно для заполнения",
+                    maxlength: "Максимальное число символов - 30"
+                },
+
+
+                phone: {
+                    digits: "Неверный формат телефона",
+                    required: "Это поле обязательно для заполнения",
+                    minlength: "Телефон должен состоять минимум из 4-х цифр"
+                },
+                
+            },
+            
+            submitHandler: function() {
+            	$.fancybox.open({src: '#popup-callback-successfull', opts: fancyboxInlineParams}); 
+			}
+        });
+    }
+    
+	
+    if($('#form-offer').length) {
+    	
+	  	$('input[name="phone"]').mask("7(999)99-99-999");
+
+        $("#form-offer").validate({
+            rules:{
+                name:{
+                    required: true,
+                    minlength: 1,
+                    maxlength: 30
+                },
+
+                phone: {
+                    required: true,
+                    minlength: 4,
+                    maxlength: 17,
+                    digits: false
+                },
+                
+            },
+            
+            
+            messages:{
+
+                name: {
+                    required: "Это поле обязательно для заполнения",
+                    maxlength: "Максимальное число символов - 30"
+                },
+
+
+                phone: {
+                    digits: "Неверный формат телефона",
+                    required: "Это поле обязательно для заполнения",
+                    minlength: "Телефон должен состоять минимум из 4-х цифр"
+                },
+                
+            },
+            
+            submitHandler: function() {
+            	$.fancybox.open({src: '#popup-offer-successfull', opts: fancyboxInlineParams}); 
+			}
+        });
+    }
+    
+    
+    
+    
+    if($('#form-request').length) {
+    	
+	  	$('input[name="phone"]').mask("7(999)99-99-999");
+
+        $("#form-request").validate({
+            rules:{
+                phone: {
+                    required: true,
+                    minlength: 4,
+                    maxlength: 17,
+                    digits: false
+                },
+            },
+            
+            
+            messages:{
+
+                phone: {
+                    digits: "Неверный формат телефона",
+                    required: "Это поле обязательно для заполнения",
+                    minlength: "Телефон должен состоять минимум из 4-х цифр"
+                },
+            },
+            
+            submitHandler: function() {
+			}
+        });
+    }
     
     
     if($('#form-feedback').length) {
@@ -795,21 +977,15 @@ function deviceType() {
 				
 				flag_resize_mobile2 = true; 
 				
-				// if($('#bday-slider').length) {
-				// 	if( !$('#bday-slider').is('.slick-slider')) {
-				// 		$('#bday-slider').slick("reinit");
-				// 	}
-				// }
 				
-				if($('.js-sect.open').length) {
-					$('.js-sect.open').each(function() {
-						let slider = $(this).find('.js-sect-hidden').attr('id');
-						
-						if( !$('#' + slider).is('.slick-slider')) {
-							$('#' + slider).slick("init");
+				if($('.catalog__list').length) {
+					$('.catalog__list').each(function() {
+						if( !$(this).is('.slick-slider')) {
+							$(this).slick("reinit");
 						}
 					})
 				}
+				
 				
 			}
 			

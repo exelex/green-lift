@@ -2,7 +2,9 @@
 @media (min-width: $screen-sm-min)
 
 	.sect-top
-		background: url(../img/bg_top.jpg) 50% 0 no-repeat
+		background-image: url(../img/bg_top.jpg)
+		background-repeat: no-repeat
+		background-position: 50% 0
 		background-size: cover
 		
 		
@@ -283,7 +285,6 @@
 
 
 	.sect-prod
-		margin-bottom: 25px
 		padding: 60px 0 5px
 		
 		.sect-title
@@ -346,7 +347,7 @@
 
 
 	.sect-why
-		margin: 75px 0 35px
+		padding: 75px 0 35px
 		
 		.sect-title
 		
@@ -400,7 +401,7 @@
 					
 				
 	.sect-news
-		margin: 107px 0 30px
+		padding: 70px 0 30px
 		
 		.inner-wrapper
 			position: relative
@@ -445,7 +446,6 @@
 					
 
 	.sect-feedback
-		margin-top: 30px
 	
 		&__wrapper
 			padding: 31px 0 48px
@@ -554,6 +554,7 @@
 	.sect-contacts
 		position: relative
 		overflow: hidden
+		background: #fff
 		
 		.inner-wrapper
 			display: flex
@@ -856,6 +857,121 @@
 			margin-left: 10px
 			margin-right: 10px
 		
+		
+	
+	.card-advantages
+		display: flex
+		
+		.item
+			flex: 1
+			padding-right: 10px
+			
+	.card-info
+		display: flex
+		padding: 38px 36px 25px 42px
+		
+		&__l
+			width: 37%
+			flex: 0 1 auto
+			margin-right: 6%
+			
+			.img
+				min-height: 315px
+				display: flex
+				align-items: center
+				position: relative
+				
+				.img-front
+					max-width: 81%
+					position: relative
+					z-index: 1
+				
+				.img-back
+					position: absolute
+					top: 0
+					left: 22%
+					filter: blur(5px)
+					transform: scale(0.45)
+			
+			.bottom
+				margin-top: 28px
+				
+				.btn
+					width: 100%
+			
+		&__text
+			flex: 1 1 0
+			
+			.text
+				margin-top: 4px
+				line-height: 1.75
+				font-size: 14px
+			
+		&__download
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			
+			.btn
+				margin-bottom: 15px
+				
+				&:first-child
+					margin-right: 10px
+					
+			
+			
+			
+			
+			
+	.bottom-request
+		
+		.wrap
+			width: 50%
+			padding: 21px 0 26px
+		
+		.img
+			position: absolute
+			bottom: 0
+			right: 17px
+			width: 45%
+			max-width: 432px
+			height: 105%
+			
+			img
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				width: 100%
+				object-fit: cover
+				
+				
+				
+	.table
+		.tr
+			display: flex
+			
+			& > *
+				flex: 1
+				
+			* + *
+				border-left: 1px solid #DEDEDE
+				
+			& + .tr
+				border-top: 1px solid #DEDEDE
+				
+	
+	.card-other
+		
+		.table
+			
+			.td, .th
+				padding-left: 14px
+				padding-right: 14px
+				
+			.th
+				text-align: center
+				
 
 
 	#footer

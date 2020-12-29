@@ -9,6 +9,7 @@
 @import 'defaults'
 @import 'form-elements'
 @import 'plugin.slick'
+@import 'plugin.fancybox' 
 
 // plugins
 
@@ -40,7 +41,21 @@
 
 #header 
 	background: #fff
+	position: relative
+	
+	&:before
+		content: ""
+		position: absolute
+		top: 0px
+		right: calc(50% - 1565px)
+		width: 1400px
+		height: 100%
+		background: url(../img/header_bg.png) 0 0 no-repeat
+		background-size: cover
 		
+	.header__wrapper
+		position: relative
+		z-index: 1
 
 
 
@@ -78,11 +93,13 @@
 .breadcrumbs 
 	display: flex
 	align-items: center
+	flex-wrap: wrap
 	font-size: 10px
 	font-weight: bold
 	text-transform: uppercase
 	
 	.item
+		margin-bottom: 4px
 		
 		& + .item
 			padding-left: 20px
@@ -116,6 +133,7 @@
 	
 	h1
 		font-size: 38px
+		margin: 0
 	
 	
 	
@@ -173,6 +191,7 @@
 
 /* ****** sect-why ****** */
 .sect-why 
+	background: #fff
 	
 	&__list
 		.item
@@ -191,6 +210,7 @@
 
 /* ****** sect-news ****** */
 .sect-news 
+	background: #fff
 	
 	&__carousel
 		.item
@@ -657,6 +677,12 @@
 			z-index: 3
 			
 			
+	.subscribe
+		width: 100%
+		max-width: 100%
+		margin: 0
+			
+			
 			
 /* ****** catalog-info ****** */
 .catalog-info 
@@ -1069,7 +1095,7 @@
 		font-size: 13px
 		color: #64656F
 		text-align: center
-					
+		
 					
 					
 					
@@ -1203,6 +1229,19 @@
 			
 			.btn
 				min-width: 200px
+				
+				
+				
+/* ****** sect-top ****** */
+.sect-top 
+	background-color: #fff
+	
+	#header
+		background: none
+		
+		&:before
+			display: none
+
 
 
 
@@ -1429,7 +1468,325 @@
 		
 
 
+
+
+
+
 					
+					
+/* ****** card ****** */
+.card 
+	
+
+.card-description 
+	margin: 38px 0 15px
+	+mtb
+	
+	h3
+		font-size: 23px
+
+.card-note
+	margin: 42px 0 25px
+	padding: 21px 30px 21px 77px
+	border: 2px solid #95BF48
+	border-radius: 3px
+	position: relative
+	
+	.icon
+		position: absolute
+		top: -27px
+		left: 10px
+		width: 35px
+		height: 35px
+		width: 67px
+		height: 35px
+		padding-left: 11px
+		background: $bg
+		
+		*
+			position: relative
+		
+		&:before
+			content: ""
+			position: absolute
+			top: 8px
+			left: 18px
+			width: 38px
+			height: 38px
+			background: #FAD652
+			border-radius: 50%
+			
+			
+			
+.card-advantages
+	margin: 51px 0 25px
+	
+	.item
+		&__wrap	
+			display: flex
+			
+			.icon
+				width: 50px
+				flex: 0 1 auto
+				margin-right: 7px
+				
+			.text
+				flex: 1 1 0
+				padding-top: 2px
+				font-size: 15px
+				
+				
+.card-info
+	margin: 25px 0 25px
+	background: #fff
+	border-radius: 7px
+	box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05)
+	
+	&__text
+		
+		.text
+			margin-top: 4px
+			line-height: 1.75
+			font-size: 14px
+		
+		ul.list
+			margin-top: 1.4em
+			font-size: 14px
+			
+			li
+				margin: 7px 0 7px 3px
+				padding-left: 30px
+				
+				&:before
+					display: none
+				
+				&:after
+					content: ""
+					position: absolute
+					top: 5px
+					left: 4px
+					@include mixin-i
+					@include mixin-i-leaf4
+				
+				
+				
+				
+.card-composition
+	margin: 25px 0 25px
+
+.card-text-add
+	margin: 43px 0 37px
+	font-size: 18px
+	text-align: center
+	
+	
+.card-other
+	
+	.bottom
+		margin-top: 30px
+		text-align: center
+		
+		.btn.btn--icon
+			width: 205px
+			position: relative
+			padding-right: 60px
+			
+			.icon
+				position: absolute
+				top: calc(50% - 9px)
+				right: 28px
+				
+				
+/* ****** bottom-request ****** */
+.bottom-request 
+	margin: 37px 0 25px
+	padding: 0 17px 0 26px
+	background-image: url(../img/leaf.svg), linear-gradient(270deg, #97C046 0%, #80AD53 100%)
+	background-repeat: no-repeat
+	background-position: 86% 28%
+	border-radius: 7px
+	position: relative
+	color: #fff
+	
+	.title
+		font-family: $font-title, sans-serif
+		font-size: 21px
+		font-weight: bold
+		
+	.text
+		margin-top: 5px
+		font-family: $font-title, sans-serif
+		font-size: 15px
+		
+	.bottom
+		margin-top: 16px
+		
+		.btn
+			min-width: 250px
+			
+	&__form
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		
+		form
+			width: 520px
+			min-width: 520px
+			display: flex
+			flex: 0 1 auto
+			margin-right: 19px
+			margin-top: 15px
+			align-items: center
+			height: 50px
+			background: #fff
+			border-radius: 25px
+			box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.15)
+			position: relative
+			
+			.field
+				position: relative
+				width: 335px
+				min-width: 335px
+			
+			.inp
+				width: 100%
+				border-radius: 25px 0 0 25px
+				
+				
+			.submit
+				position: absolute
+				top: 0
+				right: 0
+				width: 250px
+				z-index: 1
+				
+				.btn
+					width: 100%
+		
+		.note
+			min-width: 310px
+			max-width: 310px
+			padding-left: 31px
+			margin-top: 25px
+			position: relative
+			font-size: 12px
+			color: #fff
+			line-height: 1.3
+			
+			&:before
+				content: ""
+				position: absolute
+				top: calc(50% - 14px)
+				left: 0
+				@include mixin-i
+				@include mixin-i-lock
+				
+			a
+				color: #fff
+		
+			
+			
+			
+	&.--with-form
+		background-position: 78% 28%
+		
+		.wrap
+			width: 70%
+			padding-bottom: 41px
+			
+		.img
+			right: -38px
+		
+		.title
+			font-size: 27px
+			
+		.text
+			margin-top: 0
+			font-size: 17px
+			
+			
+			
+	
+
+			
+			
+			
+/* ****** catalog-other-s ****** */
+.catalog-other-s 
+	background: #fff
+	border-radius: 7px
+	border: 1px solid #ECECEC
+	
+	.top-title
+		padding: 16px 27px 15px
+		font-size: 16px
+		font-weight: bold
+		color: #000
+		text-transform: uppercase
+		
+		
+	&__list
+	
+		.item
+			border-top: 1px solid #ECECEC
+			
+			a
+				display: flex
+				align-items: center
+				padding: 11px 15px 11px 25px
+				color: #558E1A
+				text-decoration: none
+				
+				&:hover
+					.text
+						text-decoration: none
+				
+			.img
+				width: 65px
+				margin-right: 15px
+				flex: 0 1 auto
+				
+			.text
+				flex: 1 1 0
+				font-size: 15px
+				line-height: 1.4
+				text-decoration: underline
+				
+				
+				
+				
+
+	
+	
+			
+				
+				
+				
+				
+/* ****** table ****** */
+.table 
+	margin: 25px 0 15px
+	font-size: 13px
+	border: 1px solid #DEDEDE
+	border-radius: 2px
+	
+	.thead
+		.th
+			background: #FCFCFC
+	
+	.th
+		padding: 16px 0
+		font-weight: 700
+		text-transform: uppercase
+		
+	.td
+		padding: 14px 0
+
+				
+				
+
+	
+		
 
 
 
@@ -1561,7 +1918,123 @@
 					
 
 /* ********** ********** */
+
+
+
+
+
+/* ****** popup ****** */
+
+.popup-icon
+	position: absolute
+	top: -4px
+	left: 0px
 	
+.popup__wrap
+	padding: 45px 50px 45px
+	color: #fff
+	
+.popup-title, .popup-text
+	font-family: $font-title, sans-serif
+	text-align: center	
+	
+.popup-title
+	font-size: 21px
+	font-weight: bold
+	
+.popup-text
+	margin-top: 8px
+	font-size: 15px
+	
+.popup-form
+	margin-top: 15px
+	
+	.field
+		margin-top: 15px
+		
+	.submit
+		margin-top: 15px
+		text-align: center
+		
+		.btn
+			min-width: 200px
+			
+
+	.note
+		padding-left: 29px
+		margin-top: 20px
+		position: relative
+		font-size: 12px
+		color: #fff
+		line-height: 1.3
+		
+		&:before
+			content: ""
+			position: absolute
+			top: calc(50% - 14px)
+			left: 0
+			@include mixin-i
+			@include mixin-i-lock
+			
+		a
+			color: #fff
+			
+.popup-btn
+	margin-top: 13px
+	text-align: center
+	
+	.btn
+		width: 200px	
+	
+
+/* ****** fancybox ****** */
+		
+.fancybox-toolbar
+	opacity: 1 !important
+	visibility: visible
+	
+.fancybox-is-open .fancybox-bg
+	opacity: 1
+	
+.fancybox-slide--html
+	padding: 0px
+		
+.fancybox-container-inline
+	
+	.fancybox-slide
+		transition-property: transform
+	
+	.fancybox-navigation, .fancybox-infobar
+		display: none !important
+		
+	.fancybox-content
+		background: none
+		padding: 40px 30px
+		max-width: 495px
+		
+		.popup__wrap
+			border-radius: 8px
+			background: linear-gradient(270deg, #97C046 0%, #80AD53 100%)
+			
+			
+.fancybox-can-swipe .fancybox-content, .fancybox-can-pan .fancybox-content
+	cursor: auto
+	
+.fancybox-close-small
+	
+	svg
+		display: none
+		
+	&:before
+		content: ""
+		position: absolute
+		top: 15px
+		right: 15px
+		@include mixin-i
+		@include mixin-i-close2
+
+		
+		
 	
 	
 		

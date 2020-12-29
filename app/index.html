@@ -106,7 +106,7 @@
 				
 				
 				<div class="mobile-menu__bottom">
-					<a href="" class="btn btn--yellow">Заказать звонок</a>
+					<a data-fancybox-modal data-src="#popup-callback" href="javascript:;" class="btn btn--yellow">Заказать звонок</a>
 				</div>
 					
 			</div>
@@ -307,7 +307,7 @@
 							</div>
 							
 							<div class="h-contacts__callback">
-								<a href="" class="btn btn--yellow">Заказать звонок</a>
+								<a data-fancybox-modal data-src="#popup-callback" href="javascript:;" class="btn btn--yellow">Заказать звонок</a>
 							</div>
 						</div>
 					</div>
@@ -1112,7 +1112,7 @@
 						</div>
 						
 						<div class="sect-contacts__callback">
-							<a href="" class="btn btn--yellow size-xl">Заказать звонок</a>
+							<a data-fancybox-modal data-src="#popup-callback" href="javascript:;" class="btn btn--yellow size-xl">Заказать звонок</a>
 						</div>
 						</div>
 				</div>
@@ -1161,7 +1161,7 @@
 				<div class="f-nav__wrap js-show-hidden">
 					<div><a href="">Главная</a></div>
 					<div><a href="">О нашей компании</a></div>
-					<div class="active"><a href="">Новости компании</a></div>
+					<div><a href="">Новости компании</a></div>
 					<div><a href="">Калькулятор эффективности</a></div>
 					<div><a href="">Стать дистрибьютором</a></div>
 					<div><a href="">Отзывы клиентов</a></div>
@@ -1218,6 +1218,116 @@
 		<!-- end inner-wrapper -->
 	</footer>
 	<!-- end footer -->
+	
+	
+	
+	
+	<!-- 
+		вручную открывать модалки только с параметрами "opts: fancyboxInlineParams"
+		пример: $.fancybox.open({src: '#popup-pay', opts: fancyboxInlineParams})
+	 -->
+
+	<div style="display: none;" id="popup-callback" class="popup">
+		<div class="popup__wrap">
+			<div class="popup-icon">
+				<span class="i i-phone2"></span>
+			</div>
+			
+			<div class="popup-title">Заказать звонок</div>
+			<div class="popup-text">Оставьте заявку на обратный звонок, и мы свяжемся с вами в ближайшее время!</div>
+			
+			<div class="popup-form form">
+				<form id="form-callback">
+					<div class="field">
+						<input type="text" class="inp inp--white" name="name" placeholder="Как вас зовут">
+					</div>
+					
+					<div class="field">
+						<input type="tel" class="inp inp--white" name="phone" placeholder="+7 (____) ____ - ____">
+					</div>
+					
+					<div class="note">
+						Согласен с обработкой персональных данных в соответствии с <a href="privacy.html">Политикой конфеденциальности</a>
+					</div>
+						
+					<div class="submit">
+						<button type="submit" class="btn btn--yellow size-l">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div style="display: none;" id="popup-callback-successfull" class="popup">
+		<div class="popup__wrap">
+			<div class="popup-icon">
+				<span class="i i-check"></span>
+			</div>
+			
+			<div class="popup-title">Спасибо за заявку!</div>
+			
+			<div class="popup-text">Мы получили Вашу заявку и уже обрабатываем её. Наш менеджер свяжется с Вами в ближайшее время по указанным контактам.</div>
+			
+			<div class="popup-btn">
+				<button class="btn btn--yellow size-l js-fancybox-close">Хорошо</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div style="display: none;" id="popup-offer" class="popup">
+		<div class="popup__wrap">
+			<div class="popup-icon">
+				<span class="i i-doc"></span>
+			</div>
+			
+			<div class="popup-title">Получить предложение</div>
+			<div class="popup-text">Оставьте контакты и получите уникальное предложение к вашим требованиям</div>
+			
+			<div class="popup-form form">
+				<form id="form-offer">
+					<div class="field">
+						<input type="text" class="inp inp--white" name="name" placeholder="Как вас зовут">
+					</div>
+					
+					<div class="field">
+						<input type="tel" class="inp inp--white" name="phone" placeholder="+7 (____) ____ - ____">
+					</div>
+					
+					<div class="note">
+						Согласен с обработкой персональных данных в соответствии с <a href="privacy.html">Политикой конфеденциальности</a>
+					</div>
+						
+					<div class="submit">
+						<button type="submit" class="btn btn--yellow size-l">Получить предложение</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div style="display: none;" id="popup-offer-successfull" class="popup">
+		<div class="popup__wrap">
+			<div class="popup-icon">
+				<span class="i i-mail"></span>
+			</div>
+			
+			<div class="popup-title">Спасибо за подписку!</div>
+			
+			<div class="popup-text">Ваше email vasyan@gmail.com успешно подписан на рассылку новостей и обновлений каталога.</div>
+			
+			<div class="popup-btn">
+				<button class="btn btn--yellow size-l js-fancybox-close">Хорошо</button>
+			</div>
+		</div>
+	</div>
 	
 	
 	

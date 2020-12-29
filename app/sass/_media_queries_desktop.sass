@@ -294,7 +294,6 @@
 			width: 25%
 			max-width: 25%
 			min-width: 25%
-			
 	
 	
 
@@ -315,6 +314,11 @@
 
 /* media queries desktop 1100 - 1259 */
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) 
+	
+	#header
+		&:before
+			right: calc(50% - 1095px)
+			width: 1000px
 	
 	.main-menu
 		margin: 0 28px 0 16px
@@ -368,6 +372,22 @@
 				font-size: 13px
 
 
+	
+	.card-advantages
+		
+		.item
+		
+			.icon
+				margin-right: 3px
+
+			.text
+				font-size: 14px
+				
+	.bottom-request
+	
+		.img
+			width: 55%
+			height: 105%
 
 
 /* media queries desktop 1280+ */

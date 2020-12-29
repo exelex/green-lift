@@ -101,6 +101,19 @@ input[type=number]::-webkit-inner-spin-button
 		&:active
 			background: linear-gradient(90.79deg, #FAD652 3.75%, #FBB707 104.48%)
 			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.12)
+		
+	&.btn--yellow2
+		font-size: 12px
+		font-weight: 500
+		color: #4B3F0F
+		background: #FFF5D1
+		
+		&:hover
+			background: linear-gradient(90.79deg, #FAD652 3.75%, #FBB707 104.48%)
+			
+		&:active
+			background: linear-gradient(90.79deg, #FAD652 3.75%, #FBB707 104.48%)
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.12)
 			
 	
 		
@@ -119,6 +132,11 @@ input[type=number]::-webkit-inner-spin-button
 			background: #8BBF43
 			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.12)
 			color: #fff
+			
+		&.btn--download
+			&:hover
+				.i
+					filter: grayscale(100%) brightness(2)
 		
 		
 	&.btn--green2
@@ -139,10 +157,13 @@ input[type=number]::-webkit-inner-spin-button
 		
 			&.btn--icon
 				padding-left: 29px
-				padding-right: 48px
-			
-				.icon
-					margin-right: 24px
+				padding-right: 28px
+				
+				.icon + *
+					margin-left: 24px
+				
+				* + *
+					margin-left: 24px
 					
 		.icon-download
 			width: 38px
@@ -181,12 +202,23 @@ input[type=number]::-webkit-inner-spin-button
 				
 				
 	&.btn--download
+		padding-left: 16px
+		padding-right: 16px
+	
+		.i + .t
+			margin-left: 19px
+		
+		.t + .i
+			margin-left: 19px
 		
 		&.size-big
 			padding-left: 26px
 			padding-right: 12px
 			
 			.i + .t
+				margin-left: 19px
+			
+			.t + .i
 				margin-left: 19px
 			
 			.icon-download
