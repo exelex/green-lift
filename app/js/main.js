@@ -466,31 +466,31 @@ app.initSlick = function() {
 	
 	
 	
-	if($('.catalog__list').length) {
-		$('.catalog__list').slick({
-			arrows: false,
-			speed: 400,
-			slidesToShow: 2,
-			slidesToScroll: 1,
-			infinite: true,
-			adaptiveHeight: true,
-			dots: false,
-			responsive: [
-				{
-				  breakpoint: 2900,
-				  settings: "unslick"
-				},
+	// if($('.catalog__list').length) {
+	// 	$('.catalog__list').slick({
+	// 		arrows: false,
+	// 		speed: 400,
+	// 		slidesToShow: 2,
+	// 		slidesToScroll: 1,
+	// 		infinite: true,
+	// 		adaptiveHeight: true,
+	// 		dots: false,
+	// 		responsive: [
+	// 			{
+	// 			  breakpoint: 2900,
+	// 			  settings: "unslick"
+	// 			},
 				
-				{
-				  breakpoint: 768,
-				  settings: {
-					slidesToShow: 2
-				  }
-				},
-			  ]
-		})
+	// 			{
+	// 			  breakpoint: 768,
+	// 			  settings: {
+	// 				slidesToShow: 2
+	// 			  }
+	// 			},
+	// 		  ]
+	// 	})
 		
-	}
+	// }
 	
 	
 	if($('#slider-feedback').length) {
@@ -598,7 +598,7 @@ app.initValidate = function() {
 	
     if($('#form-partnership').length) {
     	
-	  	$('input[name="phone"]').mask("7(999)99-99-999");
+	  	new Inputmask("7(999)999-99-99").mask($('input[name="phone"]'));
 
         $("#form-partnership").validate({
             rules:{
@@ -673,7 +673,7 @@ app.initValidate = function() {
 	
     if($('#form-callback').length) {
     	
-	  	$('input[name="phone"]').mask("7(999)99-99-999");
+	  	new Inputmask("7(999)999-99-99").mask($('input[name="phone"]'));
 
         $("#form-callback").validate({
             rules:{
@@ -718,7 +718,7 @@ app.initValidate = function() {
 	
     if($('#form-offer').length) {
     	
-	  	$('input[name="phone"]').mask("7(999)99-99-999");
+	  	new Inputmask("7(999)999-99-99").mask($('input[name="phone"]'));
 
         $("#form-offer").validate({
             rules:{
@@ -765,7 +765,7 @@ app.initValidate = function() {
     
     if($('#form-request').length) {
     	
-	  	$('input[name="phone"]').mask("7(999)99-99-999");
+	  	new Inputmask("7(999)999-99-99").mask($('input[name="phone"]'));
 
         $("#form-request").validate({
             rules:{
@@ -795,7 +795,7 @@ app.initValidate = function() {
     
     if($('#form-feedback').length) {
     	
-	  	$('input[name="phone"]').mask("7(999)99-99-999");
+	  	new Inputmask("7(999)999-99-99").mask($('input[name="phone"]'));
 
         $("#form-feedback").validate({
             rules:{
@@ -861,6 +861,7 @@ app.initValidate = function() {
             },
             
             submitHandler: function() {
+            	$.fancybox.open({src: '#popup-offer-successfull', opts: fancyboxInlineParams}); 
 			}
         });
     }
@@ -869,7 +870,7 @@ app.initValidate = function() {
     
     if($('#form-consultation').length) {
     	
-	  	$('input[name="phone"]').mask("7(999)99-99-999");
+	  	new Inputmask("7(999)999-99-99").mask($('input[name="phone"]'));
 
         $("#form-consultation").validate({
             rules:{
@@ -978,13 +979,13 @@ function deviceType() {
 				flag_resize_mobile2 = true; 
 				
 				
-				if($('.catalog__list').length) {
-					$('.catalog__list').each(function() {
-						if( !$(this).is('.slick-slider')) {
-							$(this).slick("reinit");
-						}
-					})
-				}
+				// if($('.catalog__list').length) {
+				// 	$('.catalog__list').each(function() {
+				// 		if( !$(this).is('.slick-slider')) {
+				// 			$(this).slick("reinit");
+				// 		}
+				// 	})
+				// }
 				
 				
 			}
