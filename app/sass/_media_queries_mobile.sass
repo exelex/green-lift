@@ -91,17 +91,19 @@
 				
 	.mobile-menu__btn
 		position: absolute
-		top: calc(50% - 30px)
+		top: -13px
+		bottom: -4px
 		left: -1px
-		width: 60px
-		height: 60px
+		width: 45px
 		display: flex
 		align-items: center
 		justify-content: center
+		background: #82af53
 			
 		span
 			@include mixin-i
 			@include mixin-i-lines
+			filter: brightness(0) invert(1)
 			
 	.main-menu
 		display: none
@@ -1757,12 +1759,11 @@
 
 	.mobile-menu
 		$mobile-menu-width: 290px
-		
 		position: fixed
 		top: 0
 		left: 0
-		max-width: $mobile-menu-width
-		width: $mobile-menu-width
+		min-width: $mobile-menu-width
+		max-width: 330px
 		background: #fff
 		z-index: 15
 		display: none
@@ -1807,7 +1808,7 @@
 			height: 25px
 			display: inline-flex
 			align-items: center
-			font-size: 10px
+			font-size: 12px
 			font-weight: 500
 			text-transform: uppercase
 			color: #B8B8B8
@@ -1849,7 +1850,7 @@
 				& > a, &__btn
 					display: block
 					padding: 12px 29px
-					font-size: 12px
+					font-size: 15px
 					font-weight: 500
 					text-transform: uppercase
 					color: $c-default
